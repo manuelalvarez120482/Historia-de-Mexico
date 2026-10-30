@@ -44,10 +44,10 @@ function getGame(m) {
 }
 
 // ---------- Navegación ----------
-function go(view, arg) {
+function go(view, arg, arg2) {
   if (view === "home") renderHome();
   else if (view === "module") renderModule(arg);
-  else if (view === "game") renderGame(arg);
+  else if (view === "game") renderGame(arg, arg2);
   else if (view === "quiz") renderQuiz(arg);
   else if (view === "progress") renderProgress();
   window.scrollTo(0, 0);
@@ -101,19 +101,22 @@ function renderModule(id) {
       if (t === "## Para el examen") return peopleHTML(m.id) + videosHTML(m.id) + `<h3>${t.slice(3)}</h3>`;
       return t.startsWith("## ") ? `<h3>${t.slice(3)}</h3>` : `<p>${t}</p>`;
     }).join("")}
-    ${game
-      ? `<button class="primary" onclick="go('game', ${m.id})">Jugar minijuego</button>`
-      : `<p class="muted">Minijuego: próximamente</p>`}
+    ${gameButtonsHTML(m)}
     ${m.quiz.length
       ? `<button class="primary" onclick="go('quiz', ${m.id})">Hacer prueba (${m.quiz.length} preguntas)</button>`
       : `<p class="muted">Prueba: próximamente</p>`}
     ${s.attempts.length
       ? `<p class="muted">Intentos: ${s.attempts.length}. Mejor resultado: ${s.best}%</p>`
       : ""}`;
+
+  addFotoButton(id);
 }
 
 // ---------- Minijuegos ----------
-function renderGame(id) {
+function renderGame(id, kind) {
+  if (kind === "sopa") return renderSopa(id);
+  if (kind === "cruci") return renderCruci(id);
+  if (kind === "foto") return renderFoto(id);
   const m = MODULES.find(x => x.id === id);
   const g = getGame(m);
   if (g.type === "match") renderMatch(id, g);
@@ -162,7 +165,7 @@ function renderTimeline(id, g) {
       app.innerHTML =
         `<h2>¡Terminaste!</h2>
         <p>Errores: ${errors}</p>
-        <button class="primary" onclick="go('game', ${id})">Repetir minijuego</button>
+        <button class="primary" onclick="go('game', ${id}, 'base')">Repetir minijuego</button>
         <button class="primary" onclick="go('module', ${id})">Volver al módulo</button>`;
       return;
     }
@@ -231,7 +234,7 @@ function renderMatch(id, g) {
       app.innerHTML =
         `<h2>¡Terminaste!</h2>
         <p>Errores: ${errors}</p>
-        <button class="primary" onclick="go('game', ${id})">Repetir minijuego</button>
+        <button class="primary" onclick="go('game', ${id}, 'base')">Repetir minijuego</button>
         <button class="primary" onclick="go('module', ${id})">Volver al módulo</button>`;
       return;
     }
