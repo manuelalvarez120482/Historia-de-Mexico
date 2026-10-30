@@ -182,6 +182,86 @@ button.card {
 
 .muted { color: #B8C4D6; font-size: 14px; }
 
+/* Personajes clave */
+.people {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 8px 0 16px;
+}
+.persona {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+  background: linear-gradient(180deg, #E4E9F0, var(--silver));
+  color: var(--text-dark);
+  border: 2px solid var(--yellow);
+  border-radius: 14px;
+  padding: 12px 8px;
+}
+.mono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--yellow);
+  border: 2px solid var(--yellow);
+  font-weight: 700;
+  font-size: 20px;
+}
+.pname { font-weight: 600; font-size: 14px; line-height: 1.2; }
+.pyears { font-size: 12px; color: #4A5A70; }
+.fig img { cursor: zoom-in; }
+
+/* Ventana ampliada */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgba(8, 18, 34, 0.92);
+  padding: 16px;
+  overflow-y: auto;
+}
+.modal.open { display: block; }
+.modal-inner { max-width: 640px; margin: 0 auto; }
+.modal-close {
+  background: linear-gradient(180deg, #E4E9F0, var(--silver));
+  color: var(--text-dark);
+  border: 2px solid var(--yellow);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.modal-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 2px solid var(--yellow);
+  border-radius: 14px;
+}
+.modal-cap {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #D5DDEA;
+}
+.modal-cap a { display: block; margin-top: 6px; color: var(--yellow); }
+.modal-card {
+  background: var(--navy-light);
+  border: 2px solid var(--yellow);
+  border-radius: 16px;
+  padding: 24px 20px;
+  text-align: center;
+}
+.big-mono { width: 96px; height: 96px; font-size: 38px; margin: 0 auto 8px; }
+
 /* Imágenes de los módulos */
 .fig {
   margin: 12px 0 16px;

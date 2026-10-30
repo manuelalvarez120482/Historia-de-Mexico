@@ -97,9 +97,10 @@ function renderModule(id) {
     <h2>${m.title}</h2>
     <p class="muted">${m.period}</p>
     ${imageHTML(m.id)}
-    ${m.lesson.map(t => t.startsWith("## ")
-      ? `<h3>${t.slice(3)}</h3>`
-      : `<p>${t}</p>`).join("")}
+    ${m.lesson.map(t => {
+      if (t === "## Para el examen") return peopleHTML(m.id) + `<h3>${t.slice(3)}</h3>`;
+      return t.startsWith("## ") ? `<h3>${t.slice(3)}</h3>` : `<p>${t}</p>`;
+    }).join("")}
     ${game
       ? `<button class="primary" onclick="go('game', ${m.id})">Jugar minijuego</button>`
       : `<p class="muted">Minijuego: próximamente</p>`}
