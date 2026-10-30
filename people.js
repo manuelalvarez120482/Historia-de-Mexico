@@ -115,7 +115,7 @@ function photoSlug(name) {
 
 // Círculo con las iniciales; si existe la foto en la carpeta fotos/, se muestra encima.
 function monoHTML(name, extra) {
-  return `<span class="mono ${extra || ""}">${initials(name)}<img src="fotos/${photoSlug(name)}.jpg" alt="" onerror="this.remove()"></span>`;
+  return `<span class="mono ${extra || ""}">${initials(name)}<img src="fotos/${photoSlug(name)}.jpg?v=8" alt="" onerror="this.remove()"></span>`;
 }
 
 function peopleHTML(id) {
