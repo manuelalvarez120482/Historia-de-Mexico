@@ -1,0 +1,17 @@
+{
+  "name": "Historia de México",
+  "short_name": "Historia MX",
+  "description": "Estudia historia de México del Porfiriato a 2018, con lecciones, minijuegos y pruebas.",
+  "lang": "es",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1F3A5F",
+  "theme_color": "#132842",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
