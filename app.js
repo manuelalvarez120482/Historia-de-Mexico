@@ -33,6 +33,16 @@ function saveAttempt(id, score, total, passed) {
   save(p);
 }
 
+// ---------- Utilidades ----------
+function shuffle(arr) {
+  return [...arr].sort(() => Math.random() - 0.5);
+}
+
+// El minijuego puede venir en modules.js (módulo 1) o en games.js (resto).
+function getGame(m) {
+  return m.game || GAMES[m.id] || null;
+}
+
 // ---------- Navegación ----------
 function go(view, arg) {
   if (view === "home") renderHome();
@@ -80,6 +90,7 @@ function renderHome() {
 function renderModule(id) {
   const m = MODULES.find(x => x.id === id);
   const s = modState(id);
+  const game = getGame(m);
 
   app.innerHTML =
     `<button class="link" onclick="go('home')">← Volver</button>
@@ -88,7 +99,7 @@ function renderModule(id) {
     ${m.lesson.map(t => t.startsWith("## ")
       ? `<h3>${t.slice(3)}</h3>`
       : `<p>${t}</p>`).join("")}
-    ${m.game
+    ${game
       ? `<button class="primary" onclick="go('game', ${m.id})">Jugar minijuego</button>`
       : `<p class="muted">Minijuego: próximamente</p>`}
     ${m.quiz.length
@@ -99,12 +110,19 @@ function renderModule(id) {
       : ""}`;
 }
 
-// ---------- Minijuego: línea del tiempo ----------
+// ---------- Minijuegos ----------
 function renderGame(id) {
   const m = MODULES.find(x => x.id === id);
-  const ev = m.game.events;
+  const g = getGame(m);
+  if (g.type === "match") renderMatch(id, g);
+  else renderTimeline(id, g);
+}
+
+// Línea del tiempo: tocar los eventos del más antiguo al más reciente
+function renderTimeline(id, g) {
+  const ev = g.events;
   const correct = [...ev].sort((a, b) => a.year - b.year);
-  const pool = [...ev].sort(() => Math.random() - 0.5);
+  const pool = shuffle(ev);
   const done = [];
   let errors = 0;
   let msg = "";
@@ -113,14 +131,14 @@ function renderGame(id) {
     const left = pool.filter(e => !done.includes(e));
     app.innerHTML =
       `<button class="link" onclick="go('module', ${id})">← Volver</button>
-      <h2>Minijuego</h2>
+      <h2>Línea del tiempo</h2>
       <p class="muted">Toca los eventos del más antiguo al más reciente.</p>
       <div class="card">
         ${done.length
-          ? done.map(e => `<p class="done">${e.year} · ${e.text}</p>`).join("")
+          ? done.map(e => `<p class="done">${e.label || e.year} · ${e.text}</p>`).join("")
           : `<p class="muted">Aún no has ordenado ningún evento.</p>`}
       </div>
-      ${left.map(e => `<button class="card event" data-i="${ev.indexOf(e)}">${e.text}</button>`).join("")}
+      ${left.map(e => `<button class="event" data-i="${ev.indexOf(e)}">${e.text}</button>`).join("")}
       <p>${msg}</p>`;
 
     app.querySelectorAll(".event").forEach(b => {
@@ -142,6 +160,76 @@ function renderGame(id) {
       app.innerHTML =
         `<h2>¡Terminaste!</h2>
         <p>Errores: ${errors}</p>
+        <button class="primary" onclick="go('game', ${id})">Repetir minijuego</button>
+        <button class="primary" onclick="go('module', ${id})">Volver al módulo</button>`;
+      return;
+    }
+    draw();
+  }
+
+  draw();
+}
+
+// Relacionar: unir cada elemento de la izquierda con su par de la derecha
+function renderMatch(id, g) {
+  const rightOrder = shuffle(g.pairs.map((_, k) => k));
+  const solved = new Set();
+  let sel = null;
+  let errors = 0;
+  let msg = "";
+
+  function draw() {
+    app.innerHTML =
+      `<button class="link" onclick="go('module', ${id})">← Volver</button>
+      <h2>Relaciona</h2>
+      <p class="muted">Toca un elemento de la izquierda y después el que le corresponde a la derecha.</p>
+      <div class="pairs">
+        <div>
+          ${g.pairs.map((p, i) => `<button class="option ${solved.has(i) ? "done-pair" : ""} ${sel === i ? "sel" : ""}"
+            data-l="${i}" ${solved.has(i) ? "disabled" : ""}>${p.a}</button>`).join("")}
+        </div>
+        <div>
+          ${rightOrder.map(k => `<button class="option ${solved.has(k) ? "done-pair" : ""}"
+            data-r="${k}" ${solved.has(k) ? "disabled" : ""}>${g.pairs[k].b}</button>`).join("")}
+        </div>
+      </div>
+      <p>${msg}</p>`;
+
+    app.querySelectorAll("[data-l]").forEach(b => {
+      b.onclick = () => selectLeft(Number(b.dataset.l));
+    });
+    app.querySelectorAll("[data-r]").forEach(b => {
+      b.onclick = () => selectRight(Number(b.dataset.r));
+    });
+  }
+
+  function selectLeft(i) {
+    sel = i;
+    msg = "";
+    draw();
+  }
+
+  function selectRight(k) {
+    if (sel === null) {
+      msg = "Primero elige un elemento de la izquierda.";
+      draw();
+      return;
+    }
+
+    if (sel === k) {
+      solved.add(k);
+      msg = "✔ Correcto.";
+    } else {
+      errors++;
+      msg = "✘ Ese no corresponde. Intenta de nuevo.";
+    }
+    sel = null;
+
+    if (solved.size === g.pairs.length) {
+      app.innerHTML =
+        `<h2>¡Terminaste!</h2>
+        <p>Errores: ${errors}</p>
+        <button class="primary" onclick="go('game', ${id})">Repetir minijuego</button>
         <button class="primary" onclick="go('module', ${id})">Volver al módulo</button>`;
       return;
     }
