@@ -85,7 +85,9 @@ function renderModule(id) {
     `<button class="link" onclick="go('home')">← Volver</button>
     <h2>${m.title}</h2>
     <p class="muted">${m.period}</p>
-    ${m.lesson.map(t => `<p>${t}</p>`).join("")}
+    ${m.lesson.map(t => t.startsWith("## ")
+      ? `<h3>${t.slice(3)}</h3>`
+      : `<p>${t}</p>`).join("")}
     ${m.game
       ? `<button class="primary" onclick="go('game', ${m.id})">Jugar minijuego</button>`
       : `<p class="muted">Minijuego: próximamente</p>`}
