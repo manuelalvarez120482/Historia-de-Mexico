@@ -107,6 +107,17 @@ function initials(name) {
   return first + last;
 }
 
+// Nombre de archivo de la foto: minúsculas, sin acentos, con guiones. Ej.: "Álvaro Obregón" -> fotos/alvaro-obregon.jpg
+function photoSlug(name) {
+  return name.normalize("NFD").replace(/[̀-ͯ]/g, "")
+    .toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+}
+
+// Círculo con las iniciales; si existe la foto en la carpeta fotos/, se muestra encima.
+function monoHTML(name, extra) {
+  return `<span class="mono ${extra || ""}">${initials(name)}<img src="fotos/${photoSlug(name)}.jpg" alt="" onerror="this.remove()"></span>`;
+}
+
 function peopleHTML(id) {
   const list = PEOPLE[id];
   if (!list) return "";
@@ -114,7 +125,7 @@ function peopleHTML(id) {
     <p class="muted">Toca una tarjeta para verla en grande y leer su dato histórico.</p>
     <div class="people">
       ${list.map((p, i) => `<button class="persona" data-m="${id}" data-i="${i}">
-        <span class="mono">${initials(p.name)}</span>
+        ${monoHTML(p.name)}
         <span class="pname">${p.name}</span>
         <span class="pyears">${p.years}</span>
       </button>`).join("")}
@@ -152,7 +163,7 @@ document.addEventListener("click", e => {
   if (card) {
     const p = PEOPLE[card.dataset.m][Number(card.dataset.i)];
     openModal(`<div class="modal-card">
-      <span class="mono big-mono">${initials(p.name)}</span>
+      ${monoHTML(p.name, "big-mono")}
       <h2>${p.name}</h2>
       <p class="muted">${p.years}</p>
       <p><strong>${p.role}</strong></p>

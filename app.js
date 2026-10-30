@@ -98,7 +98,7 @@ function renderModule(id) {
     <p class="muted">${m.period}</p>
     ${imageHTML(m.id)}
     ${m.lesson.map(t => {
-      if (t === "## Para el examen") return peopleHTML(m.id) + `<h3>${t.slice(3)}</h3>`;
+      if (t === "## Para el examen") return peopleHTML(m.id) + videosHTML(m.id) + `<h3>${t.slice(3)}</h3>`;
       return t.startsWith("## ") ? `<h3>${t.slice(3)}</h3>` : `<p>${t}</p>`;
     }).join("")}
     ${game
