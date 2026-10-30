@@ -410,3 +410,52 @@ button.card {
   margin-top: 4px;
   color: var(--yellow);
 }
+
+/* ===== Botones metálicos con relieve redondeado =====
+   Los estados (correcto, incorrecto, seleccionado) conservan su color porque
+   sus reglas son más específicas; solo se les suma el relieve. */
+:root {
+  --metal: linear-gradient(180deg, #FFFFFF 0%, #EEF1F6 14%, #D3D9E2 52%, #B4BCC9 100%);
+  --metal-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.38),
+    0 1px 2px rgba(0, 0, 0, 0.5),
+    inset 0 2px 1px rgba(255, 255, 255, 0.95),
+    inset 0 -4px 6px rgba(70, 85, 110, 0.35),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+  --metal-pressed:
+    0 1px 2px rgba(0, 0, 0, 0.45),
+    inset 0 3px 6px rgba(70, 85, 110, 0.5),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.4);
+}
+
+nav button,
+button.card,
+.primary,
+.danger,
+.option,
+.event,
+.persona,
+.video,
+.modal-close {
+  background: var(--metal);
+  box-shadow: var(--metal-shadow);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+nav button:active,
+button.card:active,
+.primary:active,
+.danger:active,
+.option:active,
+.event:active,
+.persona:active,
+.video:active,
+.modal-close:active {
+  transform: translateY(2px);
+  box-shadow: var(--metal-pressed);
+}
+
+.option:disabled:active { transform: none; }
+.primary:disabled { opacity: 0.55; }
