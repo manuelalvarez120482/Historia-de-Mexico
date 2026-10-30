@@ -459,3 +459,42 @@ button.card:active,
 
 .option:disabled:active { transform: none; }
 .primary:disabled { opacity: 0.55; }
+
+/* ===== Tipografía gruesa para títulos y botones =====
+   Archivo Black (parecida a Arial Black) se pide a Google Fonts.
+   Si no carga, se usa Inter Black, guardada en la carpeta fonts/.
+   Los textos largos (lecciones, pistas, explicaciones) se quedan en la letra normal. */
+@font-face {
+  font-family: "Inter Black Local";
+  src: url("fonts/inter-black-latin.woff?v=16") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-heavy: "Archivo Black", "Inter Black Local", "Arial Black", Impact, system-ui, sans-serif;
+}
+
+header h1,
+h2,
+h3,
+.module strong,
+.pname,
+nav button,
+.primary,
+.danger,
+.modal-close {
+  font-family: var(--font-heavy);
+  font-weight: 900;
+  letter-spacing: 0.1px;
+}
+
+header h1 { font-size: 20px; }
+h2 { font-size: 20px; line-height: 1.2; }
+h3 { font-size: 17px; line-height: 1.25; }
+.module strong { font-size: 16px; line-height: 1.2; }
+.pname { font-size: 13px; }
+nav button { font-size: 14px; }
+.primary, .danger, .modal-close { font-size: 14px; }
+.big { font-family: var(--font-heavy); }
