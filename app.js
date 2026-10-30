@@ -96,6 +96,7 @@ function renderModule(id) {
     `<button class="link" onclick="go('home')">← Volver</button>
     <h2>${m.title}</h2>
     <p class="muted">${m.period}</p>
+    ${imageHTML(m.id)}
     ${m.lesson.map(t => t.startsWith("## ")
       ? `<h3>${t.slice(3)}</h3>`
       : `<p>${t}</p>`).join("")}

@@ -181,3 +181,30 @@ button.card {
 }
 
 .muted { color: #B8C4D6; font-size: 14px; }
+
+/* Imágenes de los módulos */
+.fig {
+  margin: 12px 0 16px;
+  background: var(--navy-dark);
+  border: 2px solid var(--yellow);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.fig img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 320px;
+  object-fit: cover;
+}
+.fig figcaption {
+  padding: 10px 12px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #B8C4D6;
+}
+.fig figcaption a {
+  display: block;
+  margin-top: 4px;
+  color: var(--yellow);
+}
