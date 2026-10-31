@@ -131,7 +131,7 @@ function photoSlug(name) {
 }
 
 // Círculo con las iniciales; si existe la foto en la carpeta fotos/, se muestra encima.
-const PHOTO_V = 14;
+const PHOTO_V = 15;
 function photoURL(name) { return "fotos/" + photoSlug(name) + ".jpg?v=" + PHOTO_V; }
 
 function monoHTML(name, extra) {
