@@ -25,8 +25,6 @@ fotos/ernesto-zedillo.jpg   (Ernesto Zedillo, módulos 8)
 fotos/vicente-fox.jpg   (Vicente Fox, módulos 8)
 
 FALTAN (24):
-fotos/bernardo-reyes.jpg   (Bernardo Reyes, módulos 1)
-fotos/eulalio-gutierrez.jpg   (Eulalio Gutiérrez, módulos 2)
 fotos/diego-rivera.jpg   (Diego Rivera, módulos 3)
 fotos/david-alfaro-siqueiros.jpg   (David Alfaro Siqueiros, módulos 3)
 fotos/emilio-portes-gil.jpg   (Emilio Portes Gil, módulos 3)
