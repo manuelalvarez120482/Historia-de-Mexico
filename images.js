@@ -2,7 +2,7 @@
 // src: archivo local (carpeta images/ o fotos/); cap: pie de foto.
 // Al tocar una imagen se abre en grande con su pie de foto.
 
-const IMG_V = 15;
+const IMG_V = 16;
 
 const IMAGES = {
   1: [

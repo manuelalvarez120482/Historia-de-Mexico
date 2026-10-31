@@ -25,9 +25,6 @@ fotos/ernesto-zedillo.jpg   (Ernesto Zedillo, módulos 8)
 fotos/vicente-fox.jpg   (Vicente Fox, módulos 8)
 
 FALTAN (24):
-fotos/manuel-perez-trevino.jpg   (Manuel Pérez Treviño, módulos 4)
-fotos/adalberto-tejeda.jpg   (Adalberto Tejeda, módulos 4)
-fotos/leon-trotsky.jpg   (León Trotsky, módulos 4)
 fotos/manuel-avila-camacho.jpg   (Manuel Ávila Camacho, módulos 5)
 fotos/miguel-aleman-valdes.jpg   (Miguel Alemán Valdés, módulos 5)
 fotos/adolfo-ruiz-cortines.jpg   (Adolfo Ruiz Cortines, módulos 5)
