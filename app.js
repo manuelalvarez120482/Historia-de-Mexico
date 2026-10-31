@@ -1,4 +1,4 @@
-const KEY = "historia-mx-progreso";
+const KEY = "historia-mx-progreso-v2";
 const app = document.getElementById("app");
 
 // ---------- Almacenamiento ----------
@@ -247,7 +247,12 @@ function renderMatch(id, g) {
 // ---------- Prueba ----------
 function renderQuiz(id) {
   const m = MODULES.find(x => x.id === id);
-  const qs = m.quiz;
+  // Se mezclan las opciones de cada pregunta para que la respuesta correcta cambie de lugar.
+  const qs = m.quiz.map(q => {
+    const opts = q.options.map((text, k) => ({ text, ok: k === q.answer }));
+    const mixed = shuffle(opts);
+    return { q: q.q, explain: q.explain, options: mixed.map(o => o.text), answer: mixed.findIndex(o => o.ok) };
+  });
   let i = 0;
   let score = 0;
 

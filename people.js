@@ -1,102 +1,119 @@
-// Personajes clave de cada módulo (sin fotografías).
+// Personajes clave de cada módulo.
 // name: nombre; years: fechas; role: cargo o papel; fact: dato histórico.
+// Si existe fotos/<nombre-sin-acentos>.jpg, se muestra la foto.
 
 const PEOPLE = {
   1: [
     { name: "Porfirio Díaz", years: "1830 – 1915", role: "Presidente de México",
-      fact: "Gobernó cerca de 30 años (1876–1880 y 1884–1911). Renunció en 1911 y murió en el exilio, en París." },
-    { name: "Justo Sierra", years: "1848 – 1912", role: "Ministro de Instrucción Pública",
-      fact: "Impulsó la fundación de la Universidad Nacional en 1910, antecedente de la UNAM." },
-    { name: "José Yves Limantour", years: "1854 – 1935", role: "Secretario de Hacienda",
-      fact: "Ordenó las finanzas del régimen y fue la figura más influyente del grupo de los científicos." },
-    { name: "Ricardo Flores Magón", years: "1873 – 1922", role: "Periodista y líder del Partido Liberal Mexicano",
-      fact: "Desde el exilio publicó el periódico Regeneración. Murió preso en Estados Unidos." },
-    { name: "Francisco I. Madero", years: "1873 – 1913", role: "Líder antirreeleccionista",
-      fact: "Autor de La sucesión presidencial en 1910 y del Plan de San Luis, que inició la Revolución." }
+      fact: "En 1908 dijo al periodista Creelman que no se postularía en 1910, pero se postuló otra vez. Renunció en 1911 tras los Tratados de Ciudad Juárez y se embarcó en Veracruz." },
+    { name: "Francisco I. Madero", years: "1873 – 1913", role: "Líder antirreeleccionista y presidente, 1911–1913",
+      fact: "Proclamó el Plan de San Luis (5 de octubre de 1910). Fue asesinado junto con Pino Suárez tras la Decena Trágica." },
+    { name: "Ricardo Flores Magón", years: "1873 – 1922", role: "Periodista y opositor al régimen",
+      fact: "Su periódico Regeneración se dirigía a los iletrados, a los más pobres y a los más explotados." },
+    { name: "Pascual Orozco", years: "1882 – 1915", role: "Líder de los levantamientos iniciales",
+      fact: "Se levantó contra Madero en marzo de 1912 con el Plan de la Empacadora. Fue vencido en tres meses y después apoyó a Huerta." },
+    { name: "Francisco Villa", years: "1878 – 1923", role: "Líder de los levantamientos iniciales",
+      fact: "Su ejército fue el más poderoso de los revolucionarios y el brazo armado más leal a Madero. Fue asesinado en una emboscada en 1923." },
+    { name: "Emiliano Zapata", years: "1879 – 1919", role: "Líder agrarista",
+      fact: "Desconoció los acuerdos de Ciudad Juárez y exigió la devolución de las tierras. Firmó el Plan de Ayala a fines de noviembre de 1911." },
+    { name: "Bernardo Reyes", years: "1850 – 1913", role: "General y político",
+      fact: "Sus seguidores (reyistas) se movilizaron en 1910. Murió en la Decena Trágica cuando intentó tomar Palacio Nacional." }
   ],
   2: [
-    { name: "Francisco I. Madero", years: "1873 – 1913", role: "Presidente de México, 1911–1913",
-      fact: "Fue asesinado el 22 de febrero de 1913, tras la Decena Trágica, junto con el vicepresidente Pino Suárez." },
-    { name: "Emiliano Zapata", years: "1879 – 1919", role: "Líder agrarista de Morelos",
-      fact: "Proclamó el Plan de Ayala (1911) y encabezó el Ejército Libertador del Sur. Fue asesinado en Chinameca." },
-    { name: "Francisco Villa", years: "1878 – 1923", role: "Jefe de la División del Norte",
-      fact: "La toma de Zacatecas (1914) fue decisiva contra Huerta. Murió asesinado en Parral, Chihuahua." },
-    { name: "Venustiano Carranza", years: "1859 – 1920", role: "Primer Jefe del Ejército Constitucionalista",
-      fact: "Promulgó la Constitución de 1917. Murió en Tlaxcalantongo, Puebla, en 1920." },
-    { name: "Álvaro Obregón", years: "1880 – 1928", role: "General sonorense",
-      fact: "Derrotó a Villa en la batalla de Celaya (1915). Fue asesinado en 1928, después de ser reelecto." },
     { name: "Victoriano Huerta", years: "1850 – 1916", role: "General y presidente de facto",
-      fact: "Encabezó el golpe contra Madero en 1913 y gobernó como dictador hasta julio de 1914." }
+      fact: "Disolvió las cámaras y gobernó como dictador. Renunció el 15 de julio de 1914. Estados Unidos no reconoció su gobierno." },
+    { name: "Venustiano Carranza", years: "1859 – 1920", role: "Primer Jefe del movimiento constitucionalista",
+      fact: "Gobernador de Coahuila, se levantó contra Huerta. Fue electo presidente en 1917 y fue asesinado en mayo de 1920 rumbo a Veracruz." },
+    { name: "Álvaro Obregón", years: "1880 – 1928", role: "General del ejército del Noroeste",
+      fact: "Llegó primero a la Ciudad de México en 1914 y derrotó a Villa en cuatro batallas decisivas." },
+    { name: "Francisco Villa", years: "1878 – 1923", role: "Jefe de la División del Norte",
+      fact: "Se reunió con Zapata en Xochimilco el 4 de diciembre de 1914. Fue derrotado por Obregón y asesinado en 1923." },
+    { name: "Emiliano Zapata", years: "1879 – 1919", role: "Jefe del Ejército Libertador del Sur",
+      fact: "Asistió a la Convención de Aguascalientes con voz, pero sin voto. Fue asesinado a traición por René Guajardo en 1919." },
+    { name: "Eulalio Gutiérrez", years: "1881 – 1939", role: "Presidente interino de la Convención",
+      fact: "Su gobierno se mostró incapaz de hacer una política revolucionaria, y él y sus allegados se pasaron al bando de Obregón." }
   ],
   3: [
     { name: "Álvaro Obregón", years: "1880 – 1928", role: "Presidente, 1920–1924",
-      fact: "Pacificó el país con acuerdos entre militares, obreros y campesinos, y apoyó el proyecto educativo de Vasconcelos." },
+      fact: "Tuvo apoyo campesino y repartió más de 1 170 000 hectáreas. Fue asesinado en 1928 después de ganar la reelección." },
     { name: "José Vasconcelos", years: "1882 – 1959", role: "Primer secretario de Educación Pública",
-      fact: "Impulsó las misiones culturales, las bibliotecas y el muralismo en edificios públicos." },
+      fact: "Fundó bibliotecas, editó clásicos y reunió a los muralistas. En 1929 fue candidato opositor a la presidencia." },
     { name: "Plutarco Elías Calles", years: "1877 – 1945", role: "Presidente, 1924–1928, y Jefe Máximo",
-      fact: "Fundó el PNR en 1929. Su gobierno enfrentó la Guerra Cristera." },
-    { name: "Lázaro Cárdenas", years: "1895 – 1970", role: "Presidente, 1934–1940",
-      fact: "Decretó la expropiación petrolera el 18 de marzo de 1938 y repartió cerca de 18 millones de hectáreas." },
+      fact: "Creó el Banco de México (1925), enfrentó la Guerra Cristera y dominó el Maximato." },
     { name: "Diego Rivera", years: "1886 – 1957", role: "Muralista",
-      fact: "Pintó los murales de la SEP, con escenas del trabajo, el campo y la historia de México." },
-    { name: "Vicente Lombardo Toledano", years: "1894 – 1968", role: "Líder obrero",
-      fact: "Fundó la Confederación de Trabajadores de México (CTM) en 1936." }
+      fact: "Pintó «Día de muertos» y «Quema de los Judas» en la SEP, y murales en Chapingo y en Palacio Nacional." },
+    { name: "David Alfaro Siqueiros", years: "1896 – 1974", role: "Muralista",
+      fact: "Autor de «Retrato actual de México», un fresco en Santa Bárbara, California." },
+    { name: "Emilio Portes Gil", years: "1890 – 1978", role: "Presidente provisional, 1928–1930",
+      fact: "Ocupó la presidencia tras el asesinato de Obregón, terminó la Guerra Cristera y concedió la autonomía a la Universidad." },
+    { name: "Pascual Ortiz Rubio", years: "1877 – 1963", role: "Presidente, 1930–1932",
+      fact: "Fue el primer candidato del PNR. Renunció el 2 de septiembre de 1932 porque no pudo quitarse la tutela de Calles." }
   ],
   4: [
-    { name: "Manuel Ávila Camacho", years: "1897 – 1955", role: "Presidente, 1940–1946",
-      fact: "Durante su gobierno se creó el IMSS (1943) y México participó en la Segunda Guerra Mundial." },
-    { name: "Miguel Alemán Valdés", years: "1900 – 1983", role: "Presidente, 1946–1952",
-      fact: "Impulsó la industrialización y la construcción de la Ciudad Universitaria." },
-    { name: "Adolfo Ruiz Cortines", years: "1889 – 1973", role: "Presidente, 1952–1958",
-      fact: "En 1953 se reconoció el voto de las mujeres en elecciones federales. En 1954 se devaluó el peso." },
-    { name: "Adolfo López Mateos", years: "1909 – 1969", role: "Presidente, 1958–1964",
-      fact: "Nacionalizó la industria eléctrica (1960) y se entregaron los primeros libros de texto gratuitos (1959)." }
+    { name: "Lázaro Cárdenas", years: "1895 – 1970", role: "Presidente, 1934–1940",
+      fact: "Decretó la expropiación petrolera el 18 de marzo de 1938 y transformó el PNR en PRM." },
+    { name: "Plutarco Elías Calles", years: "1877 – 1945", role: "Jefe Máximo",
+      fact: "Al inicio del sexenio de Cárdenas convivieron intereses callistas y cardenistas, hasta que Calles fue expulsado del juego político." },
+    { name: "Manuel Pérez Treviño", years: "1890 – 1945", role: "Presidente del PNR y candidato favorecido por Calles",
+      fact: "Calles lo prefería, pero la presión de las filas intermedias del partido llevó a la nominación de Cárdenas." },
+    { name: "Adalberto Tejeda", years: "1883 – 1960", role: "Candidato presidencial en 1934",
+      fact: "Fue uno de los tres candidatos del sexenio 1934–1940." },
+    { name: "León Trotsky", years: "1879 – 1940", role: "Revolucionario ruso",
+      fact: "Cárdenas le dio asilo político en México." }
   ],
   5: [
-    { name: "Gustavo Díaz Ordaz", years: "1911 – 1979", role: "Presidente, 1964–1970",
-      fact: "Gobernaba durante el movimiento estudiantil de 1968 y la represión del 2 de octubre en Tlatelolco." },
-    { name: "Luis Echeverría", years: "1922 – 2022", role: "Secretario de Gobernación y presidente, 1970–1976",
-      fact: "Su gobierno coincidió con el Halconazo de 1971 y con la guerra sucia." },
-    { name: "Lucio Cabañas", years: "1938 – 1974", role: "Maestro rural y guerrillero",
-      fact: "Dirigió el Partido de los Pobres en Guerrero. Murió en combate en diciembre de 1974." },
-    { name: "Genaro Vázquez Rojas", years: "1931 – 1972", role: "Maestro y guerrillero",
-      fact: "Encabezó un movimiento armado en Guerrero. Murió en 1972, en un accidente automovilístico." },
-    { name: "Elena Poniatowska", years: "nacida en 1932", role: "Escritora y periodista",
-      fact: "Su libro La noche de Tlatelolco (1971) reunió testimonios sobre el 2 de octubre de 1968." }
+    { name: "Manuel Ávila Camacho", years: "1897 – 1955", role: "Presidente, 1940–1946",
+      fact: "Impulsó la Unidad Nacional, firmó el pacto obrero-industrial, creó el IMSS (1943) y mandó el Escuadrón 201 a la guerra." },
+    { name: "Miguel Alemán Valdés", years: "1900 – 1983", role: "Presidente, 1946–1952",
+      fact: "Fue el primer presidente civil. Su gobierno se asocia con corrupción, charrismo sindical y apoyo a la inversión extranjera." },
+    { name: "Adolfo Ruiz Cortines", years: "1889 – 1973", role: "Presidente, 1952–1958",
+      fact: "En 1953 se reconoció el voto de la mujer. Fue un gobierno de austeridad y «moralidad»." },
+    { name: "Adolfo López Mateos", years: "1909 – 1969", role: "Presidente, 1958–1964",
+      fact: "Nacionalizó la industria eléctrica, creó el ISSSTE y los libros de texto gratuitos, y enfrentó a ferrocarrileros y maestros." },
+    { name: "Vicente Lombardo Toledano", years: "1894 – 1968", role: "Líder político y sindical",
+      fact: "Creó el Partido Popular en 1948, que en 1960 se convirtió en Partido Popular Socialista." },
+    { name: "Fidel Velázquez", years: "1900 – 1997", role: "Líder de la CTM",
+      fact: "Dirigió la Confederación de Trabajadores de México durante unos 60 años." },
+    { name: "Rubén Jaramillo", years: "1900 – 1962", role: "Líder campesino de Morelos",
+      fact: "Excombatiente zapatista, fue asesinado en 1962. Es un símbolo de la lucha campesina." },
+    { name: "Demetrio Vallejo", years: "1910 – 1985", role: "Líder ferrocarrilero",
+      fact: "Encabezó el movimiento ferrocarrilero que comenzó en 1958." },
+    { name: "Othón Salazar", years: "1920 – 2008", role: "Líder magisterial",
+      fact: "Encabezó el movimiento de los maestros que comenzó en 1958." }
   ],
   6: [
+    { name: "Gustavo Díaz Ordaz", years: "1911 – 1979", role: "Presidente, 1964–1970",
+      fact: "Su gobierno fue autoritario. Enfrentó el movimiento de los médicos (1964–1965) y el estudiantil de 1968." },
+    { name: "Luis Echeverría", years: "1922 – 2022", role: "Presidente, 1970–1976",
+      fact: "Aplicó el «desarrollo compartido» para corregir los errores del desarrollo estabilizador." },
     { name: "José López Portillo", years: "1920 – 2004", role: "Presidente, 1976–1982",
-      fact: "Nacionalizó la banca el 1 de septiembre de 1982, en plena crisis de la deuda." },
-    { name: "Miguel de la Madrid", years: "1934 – 2012", role: "Presidente, 1982–1988",
-      fact: "Aplicó programas de ajuste económico y llevó a México al GATT en 1986." },
-    { name: "Carlos Salinas de Gortari", years: "nacido en 1948", role: "Presidente, 1988–1994",
-      fact: "Firmó el TLCAN, que entró en vigor en 1994, y reformó el artículo 27 en 1992." },
-    { name: "Cuauhtémoc Cárdenas", years: "nacido en 1934", role: "Candidato del Frente Democrático Nacional en 1988",
-      fact: "En 1997 ganó la jefatura de gobierno del Distrito Federal, la primera elegida por voto." },
-    { name: "Luis Donaldo Colosio", years: "1950 – 1994", role: "Candidato presidencial del PRI",
-      fact: "Fue asesinado en Tijuana el 23 de marzo de 1994, durante la campaña." },
-    { name: "Ernesto Zedillo", years: "nacido en 1951", role: "Presidente, 1994–2000",
-      fact: "Enfrentó la crisis del error de diciembre y reconoció el triunfo de Fox en el año 2000." }
+      fact: "Usó el petróleo como aval de préstamos y, ya en crisis, expropió los bancos privados en 1982." },
+    { name: "Lucio Cabañas", years: "1938 – 1974", role: "Maestro rural y guerrillero",
+      fact: "Dirigió un movimiento guerrillero en Guerrero." },
+    { name: "Genaro Vázquez Rojas", years: "1931 – 1972", role: "Maestro y guerrillero",
+      fact: "Encabezó un movimiento guerrillero en Guerrero." }
   ],
   7: [
-    { name: "Vicente Fox", years: "nacido en 1942", role: "Presidente, 2000–2006",
-      fact: "Su triunfo del 2 de julio de 2000 terminó 71 años de gobiernos del PRI." },
-    { name: "Francisco Labastida", years: "nacido en 1942", role: "Candidato del PRI en 2000",
-      fact: "Perdió la elección presidencial de 2000 frente a Vicente Fox." },
-    { name: "Felipe Calderón", years: "nacido en 1962", role: "Presidente, 2006–2012",
-      fact: "Inició la estrategia militar contra el narcotráfico al comenzar su gobierno." },
-    { name: "Andrés Manuel López Obrador", years: "nacido en 1953", role: "Candidato de la coalición encabezada por el PRD en 2006",
-      fact: "Impugnó el resultado de la elección de 2006 y encabezó un plantón en Paseo de la Reforma." }
+    { name: "Miguel de la Madrid", years: "1934 – 2012", role: "Presidente, 1982–1988",
+      fact: "Inició el modelo neoliberal: privatizó cerca de 500 empresas y dio poder a los tecnócratas." },
+    { name: "Carlos Salinas de Gortari", years: "nacido en 1948", role: "Presidente, 1988–1994",
+      fact: "Privatizó la banca y unas 300 empresas, reformó los artículos 27 y 28 y firmó el TLC, que entró en vigor el 1 de enero de 1994." },
+    { name: "Cuauhtémoc Cárdenas", years: "nacido en 1934", role: "Candidato del Frente Democrático Nacional en 1988",
+      fact: "Rompió con el PRI para defender el nacionalismo revolucionario. Tras la elección de 1988 surgió el PRD." },
+    { name: "Manuel Clouthier", years: "1934 – 1989", role: "Candidato del PAN en 1988",
+      fact: "Compitió en la elección de 1988 contra Salinas y Cárdenas." },
+    { name: "Carlos Slim", years: "nacido en 1940", role: "Empresario",
+      fact: "Fue declarado el hombre más rico del mundo en 2007. Su fortuna se asocia con la privatización de Telmex." }
   ],
   8: [
-    { name: "Enrique Peña Nieto", years: "nacido en 1966", role: "Presidente, 2012–2018",
-      fact: "Impulsó las reformas del Pacto por México. Su gobierno enfrentó el caso Ayotzinapa en 2014." },
-    { name: "Andrés Manuel López Obrador", years: "nacido en 1953", role: "Ganador de la elección de 2018",
-      fact: "Ganó con más del 50 % de los votos como candidato de la coalición encabezada por Morena." },
-    { name: "José Antonio Meade", years: "nacido en 1969", role: "Candidato del PRI en 2018",
-      fact: "Había sido secretario de Hacienda y de Relaciones Exteriores." },
-    { name: "Ricardo Anaya", years: "nacido en 1979", role: "Candidato de la coalición PAN-PRD-MC en 2018",
-      fact: "Había presidido el PAN antes de competir por la presidencia." }
+    { name: "Ernesto Zedillo", years: "nacido en 1951", role: "Presidente, 1994–2000",
+      fact: "Enfrentó el «error de diciembre», rescató a los bancos con el Fobaproa y creó Progresa." },
+    { name: "Vicente Fox", years: "nacido en 1942", role: "Presidente, 2000–2006",
+      fact: "Continuó el modelo neoliberal y creó Oportunidades. Hubo estabilidad sin crecimiento." },
+    { name: "Felipe Calderón", years: "nacido en 1962", role: "Presidente, 2006–2012",
+      fact: "Ganó una elección muy cerrada en 2006 e inició la guerra contra el narco con el ejército." },
+    { name: "Andrés Manuel López Obrador", years: "nacido en 1953", role: "Candidato del PRD en 2006",
+      fact: "Pidió «voto por voto, casilla por casilla» y se declaró «Presidente Legítimo de México»." }
   ]
 };
 
@@ -114,7 +131,7 @@ function photoSlug(name) {
 }
 
 // Círculo con las iniciales; si existe la foto en la carpeta fotos/, se muestra encima.
-const PHOTO_V = 12;
+const PHOTO_V = 13;
 function photoURL(name) { return "fotos/" + photoSlug(name) + ".jpg?v=" + PHOTO_V; }
 
 function monoHTML(name, extra) {
@@ -157,8 +174,7 @@ document.addEventListener("click", e => {
   const img = e.target.closest(".fig img");
   if (img) {
     const cap = img.closest(".fig").querySelector("figcaption").innerHTML;
-    const big = img.src.replace("width=900", "width=1600");
-    openModal(`<img class="modal-img" src="${big}" alt="${img.alt}"><div class="modal-cap">${cap}</div>`);
+    openModal(`<img class="modal-img" src="${img.src}" alt="${img.alt}"><div class="modal-cap">${cap}</div>`);
     return;
   }
 

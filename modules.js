@@ -1,634 +1,690 @@
-// Contenido de los módulos. Para agregar preguntas o eventos, edita este archivo.
+// Contenido de los módulos, basado en las presentaciones del maestro.
 // lesson: los textos que empiezan con "## " se muestran como subtítulo.
 // quiz: "answer" es el índice (0 a 3) de la opción correcta.
-// game.events: "year" define el orden correcto en el minijuego.
+// Los minijuegos de cada módulo están en games.js y gamesdata.js.
 
 const MODULES = [
   {
     id: 1,
-    title: "El Porfiriato",
-    period: "1876 – 1911",
+    title: "La Revolución I: del Porfiriato a la Decena Trágica",
+    period: "1900 – 1913",
     lesson: [
-      "## Del caudillismo a la paz porfiriana",
-      "Tras la Guerra de Reforma y la intervención francesa, el país vivió décadas de inestabilidad. Porfirio Díaz, héroe de la batalla de Puebla (5 de mayo de 1862), se levantó contra Juárez con el Plan de la Noria (1871) y, tras derrotar a Lerdo de Tejada, tomó el poder con el Plan de Tuxtepec (1876).",
-      "Entre 1880 y 1884 gobernó Manuel González, pero Díaz regresó al poder en 1884. Las reformas constitucionales de 1887 permitieron la reelección indefinida. Su método se resumía en la frase \"poca política y mucha administración\".",
-      "## Los científicos y el orden",
-      "Un grupo de asesores, conocidos como los científicos, aplicó ideas del positivismo para justificar un gobierno autoritario. Figuras como José Yves Limantour (secretario de Hacienda) y Justo Sierra defendían que el país debía ordenarse antes de avanzar hacia la democracia. El lema oficial del régimen fue \"orden y progreso\".",
-      "## Ferrocarriles, inversión y economía",
-      "Durante el Porfiriato se construyeron cerca de 20 mil kilómetros de vías férreas, conectando el centro del país con la frontera norte y los puertos. La inversión extranjera, sobre todo británica, estadounidense y francesa, financió buena parte de esas obras, además de telégrafos, minas (plata, cobre, oro) y la exportación de materias primas.",
-      "El país creció económicamente, pero el progreso fue desigual: las ganancias se concentraron en pocas manos y el mercado interno y los salarios quedaron rezagados.",
-      "## La tierra y el despojo",
-      "La Ley de Colonización y Terrenos Baldíos (1883) facilitó que compañías deslindaran y compraran tierras. Muchas comunidades indígenas y campesinas perdieron sus tierras comunales frente a las grandes haciendas. Miles de peones quedaron endeudados con las tiendas de raya, donde se les vendía a precios altos y se les obligaba a pagar deudas heredadas.",
-      "## Control político y represión",
-      "El régimen controló elecciones, prensa y congreso. Los Rurales, fuerzas policiacas, mantuvieron el orden en caminos y pueblos con mano dura. Los opositores fueron encarcelados o exiliados. Los movimientos obreros fueron reprimidos con violencia: la huelga minera de Cananea, Sonora (1906) y la huelga textil de Río Blanco, Veracruz (1907).",
-      "El Partido Liberal Mexicano, encabezado por Ricardo Flores Magón desde el exilio, publicó el periódico Regeneración y en 1906 difundió un programa con demandas laborales, agrarias y políticas.",
+      "## Por qué estalló la Revolución",
+      "Las presentaciones señalan tres causas generales. Primera: la inversión extranjera desarrolló las ciudades, pero provocó inflación y eso afectó el salario de los obreros y de las clases medias. Segunda: la vinculación con el mercado de Estados Unidos hizo al país dependiente de la economía de ese país. Tercera: la modernización destruyó la economía campesina y lanzó a los campesinos al mercado internacional sin ninguna protección.",
+      "Además, los dueños de los medios de producción eran extranjeros, así que la burguesía mexicana no tenía oportunidad de crecer.",
+      "## La oposición al régimen: Regeneración y las huelgas",
+      "El periódico Regeneración, de Ricardo Flores Magón, se dirigía a los iletrados, a los más pobres y a los más explotados. Los magonistas fueron una de las corrientes que se oponían al régimen de Porfirio Díaz.",
+      "En 1906 los trabajadores de Cananea, Sonora, se fueron a la huelga y el régimen porfirista los reprimió brutalmente. En 1907 los obreros de la industria textil de Río Blanco, Veracruz, se negaron a trabajar entre vivas a Juárez y gritos contra los franceses y los españoles que controlaban las fábricas.",
       "## La sucesión presidencial de 1910",
-      "En 1908 Díaz declaró al periodista estadounidense James Creelman que México estaba listo para la democracia y que vería con buenos ojos una oposición. Sin embargo, en 1910 volvió a postularse. Francisco I. Madero publicó el libro La sucesión presidencial en 1910 y formó un partido antirreeleccionista. Fue encarcelado en San Luis Potosí, pero escapó a Texas en octubre de 1910.",
-      "## Plan de San Luis y renuncia",
-      "Desde Texas, Madero proclamó el Plan de San Luis, con fecha del 5 de octubre de 1910, que llamó al levantamiento armado el 20 de noviembre. Pronto hubo levantamientos en el norte, como el de Pascual Orozco y Francisco Villa en Chihuahua. Tras la toma de Ciudad Juárez, Díaz firmó la renuncia en mayo de 1911 y salió hacia Europa. Madero asumió la presidencia en noviembre de 1911.",
+      "En 1908, en una entrevista con el periodista estadounidense James Creelman, Díaz declaró que no se postularía a las elecciones de 1910. Con eso abrió la contienda sucesoria.",
+      "Se movilizaron varios grupos: los seguidores de Bernardo Reyes; el Partido Democrático, fundado por Benito Juárez Meza, hijo de Juárez; los antirreeleccionistas, encabezados por Francisco I. Madero; y los magonistas.",
+      "Bernardo Reyes cedió a las presiones de Díaz y aceptó una comisión oficial en Europa, con lo cual abandonó su carrera por la presidencia. Contra lo que había dicho en la entrevista, Díaz se postuló otra vez, con el apoyo del científico Ramón Corral, quien podría sucederlo. Además mandó encarcelar a Madero, que había recorrido el país en campaña.",
+      "## El Plan de San Luis (1910)",
+      "Madero escapó de la prisión y huyó a Texas. Allí proclamó el Plan de San Luis, con fecha del 5 de octubre de 1910, y convocó a tomar las armas el 20 de noviembre de 1910 a las seis de la tarde. Así, lo que había comenzado como una contienda electoral se convirtió en el movimiento armado que llamamos Revolución.",
+      "Los líderes de los levantamientos iniciales fueron Pascual Orozco, Francisco Villa y Emiliano Zapata.",
+      "## La caída de Díaz (1911)",
+      "En mayo de 1911, a menos de un año de iniciada, la lucha armada terminó con la toma de la plaza fronteriza de Ciudad Juárez. Se firmaron los Tratados de Ciudad Juárez, que pactaron la suspensión de las hostilidades y la renuncia de Díaz y de Corral. El 25 de mayo Porfirio Díaz se embarcó en Veracruz y dijo la frase: «Han soltado un tigre».",
+      "Quedó al frente del gobierno Francisco León de la Barra, cuyo papel fue organizar nuevas elecciones presidenciales. Madero transformó el Partido Nacional Antirreeleccionista en el Partido Constitucional Progresista. Su compañero de fórmula fue José María Pino Suárez, en lugar de Francisco Vázquez Gómez, y por eso perdió el apoyo de los reyistas.",
+      "## El gobierno de Madero (1911–1913): una gestión fallida",
+      "Los cambios agrarios y laborales de Madero tuvieron dos efectos. Los hacendados y empresarios los vieron como un peligro. Los campesinos y obreros quedaron insatisfechos, porque consideraron insuficiente el pago por haber participado en el movimiento contra Díaz.",
+      "En el verano de 1911 los zapatistas (de Morelos, Guerrero, México y Puebla) desconocieron el acuerdo de Ciudad Juárez y no dejaron las armas. Exigían que primero se devolvieran las tierras que los hacendados locales habían usurpado durante el porfiriato. Ese mismo año, siendo presidente León de la Barra, se inició una campaña contra los zapatistas a cargo de Victoriano Huerta. A finales de noviembre de 1911 los zapatistas firmaron el Plan de Ayala.",
+      "En marzo de 1912 Pascual Orozco se levantó en armas con el Plan de la Empacadora. Madero puso al frente de la campaña a Victoriano Huerta, y los orozquistas fueron vencidos en tres meses. Con eso el ejército federal cobró fuerza y Huerta se convirtió en una figura importante.",
+      "## La Decena Trágica (9 a 19 de febrero de 1913)",
+      "Bernardo Reyes, Félix Díaz y Manuel Mondragón encabezaron un levantamiento contra el régimen maderista. Reyes murió cuando intentaba tomar Palacio Nacional. Los sublevados se atrincheraron en La Ciudadela y Victoriano Huerta los combatía, pero más tarde se alió con Félix Díaz.",
+      "Madero y Pino Suárez fueron apresados y los asesinaron al llegar a la penitenciaría. Huerta fue nombrado secretario de Gobierno y luego ocupó la presidencia.",
+      "## Zapatismo, villismo y orozquismo",
+      "Zapatismo: fue la expresión más clara del campesinado en la Revolución. No buscaba una revolución política, sino un cambio profundo en la estructura social. Pretendía recuperar las tierras que tenían capitalistas y terratenientes, y buscaba la propiedad comunal en vez de la privada.",
+      "Villismo: también fue un ejército campesino. En su momento fue el brazo armado más leal a Madero y el ejército más poderoso de entre todos los revolucionarios. Tuvo un papel muy importante para derrotar a Huerta.",
+      "Orozquismo: apoyó al principio a Madero, pero después lo desconoció. Planteaba la nacionalización de los ferrocarriles y mejores condiciones de trabajo para los obreros. Más adelante Orozco apoyó a Huerta y enfrentó a su antiguo aliado, Villa.",
       "## Para el examen",
-      "Ideas clave: la paz porfiriana se logró a costa de la libertad política y de la tierra campesina; el crecimiento económico dependió del capital extranjero; el detonante de 1910 fue político (la reelección), no económico. Fechas que debes memorizar: 1876 (llegada al poder), 1884 (regreso y reelección), 1906 y 1907 (huelgas reprimidas), 1910 (Plan de San Luis), 1911 (renuncia de Díaz)."
+      "Ideas clave: las causas son económicas (inversión extranjera, dependencia de Estados Unidos, destrucción de la economía campesina); la chispa fue la sucesión de 1910 y la entrevista Creelman; el Plan de San Luis (5 de octubre de 1910) convocó a las armas el 20 de noviembre; los Tratados de Ciudad Juárez terminaron con Díaz en mayo de 1911; Madero fracasó porque no satisfizo ni a los hacendados ni a los campesinos; Zapata respondió con el Plan de Ayala; la Decena Trágica terminó con el asesinato de Madero y Pino Suárez."
     ],
-    game: {
-      events: [
-        { text: "Se promulga la Constitución liberal de 1857", year: 1857 },
-        { text: "Porfirio Díaz llega al poder con el Plan de Tuxtepec", year: 1876 },
-        { text: "Madero llama a la insurrección con el Plan de San Luis", year: 1910 },
-        { text: "Díaz renuncia y sale al exilio", year: 1911 }
-      ]
-    },
     quiz: [
       {
-        q: "¿Qué plan llevó a Porfirio Díaz al poder en 1876?",
-        options: ["Plan de Ayala", "Plan de Tuxtepec", "Plan de Guadalupe", "Plan de San Luis"],
-        answer: 1,
-        explain: "Díaz tomó el poder en 1876 con el Plan de Tuxtepec, tras derrotar a Lerdo de Tejada."
-      },
-      {
-        q: "¿Qué frase resumía el método de gobierno de Díaz?",
-        options: ["Libertad, igualdad y fraternidad", "Poca política y mucha administración", "Tierra y libertad", "Sufragio efectivo, no reelección"],
-        answer: 1,
-        explain: "La frase \"poca política y mucha administración\" describe la idea de gobernar con control político y eficiencia administrativa."
-      },
-      {
-        q: "¿Qué ley de 1883 facilitó que compañías adquirieran tierras y despojaran a comunidades?",
-        options: ["Ley Lerdo", "Ley de Colonización y Terrenos Baldíos", "Ley Calles", "Ley de Reforma Agraria"],
-        answer: 1,
-        explain: "La Ley de Colonización y Terrenos Baldíos (1883) permitió deslindar y vender terrenos, y muchas tierras comunales terminaron en manos de haciendas y compañías."
-      },
-      {
-        q: "¿Cómo se llamaba el grupo de asesores de Díaz que defendía el orden y el progreso con ideas positivistas?",
-        options: ["Los científicos", "Los cristeros", "Los convencionistas", "Los rurales"],
+        q: "¿Cuál de estas es una causa general de la Revolución según las presentaciones?",
+        options: ["La modernización destruyó la economía campesina", "México perdió territorio frente a Francia", "Se eliminó el comercio con Estados Unidos", "Los obreros recibieron salarios muy altos"],
         answer: 0,
-        explain: "Los científicos, como Limantour y Justo Sierra, aplicaron el positivismo para justificar un gobierno autoritario."
+        explain: "La modernización destruyó la economía campesina y lanzó a los campesinos al mercado internacional."
       },
       {
-        q: "¿En qué estado ocurrió la huelga minera de 1906 que fue reprimida con violencia?",
-        options: ["Sonora", "Veracruz", "Coahuila", "Chihuahua"],
-        answer: 0,
-        explain: "La huelga de Cananea, Sonora (1906), fue reprimida. La de Río Blanco, Veracruz (1907), fue textil."
-      },
-      {
-        q: "¿Qué periodista estadounidense entrevistó a Díaz en 1908, cuando Díaz declaró que México estaba listo para la democracia?",
-        options: ["James Creelman", "Ricardo Flores Magón", "John Reed", "Francisco I. Madero"],
-        answer: 0,
-        explain: "James Creelman publicó la entrevista. Después Díaz se postuló de nuevo en 1910, lo que avivó la oposición de Madero."
-      },
-      {
-        q: "¿Qué documento, con fecha de octubre de 1910, proclamó la insurrección maderista?",
-        options: ["Plan de San Luis", "Plan de Tuxtepec", "Plan de Ayala", "Plan de Guadalupe"],
-        answer: 0,
-        explain: "El Plan de San Luis, firmado por Madero con fecha del 5 de octubre de 1910, convocó a levantarse en armas el 20 de noviembre."
-      },
-      {
-        q: "¿En qué mes de 1911 renunció Porfirio Díaz a la presidencia?",
-        options: ["Enero", "Mayo", "Agosto", "Noviembre"],
+        q: "¿Qué huelgas de 1906 y 1907 fueron reprimidas por el régimen porfirista?",
+        options: ["Las de Puebla y Oaxaca", "Las de Cananea (Sonora) y Río Blanco (Veracruz)", "Las de Monterrey y Torreón", "Las de Tampico y Mérida"],
         answer: 1,
-        explain: "Díaz renunció en mayo de 1911, tras la toma de Ciudad Juárez, y salió hacia Europa. Madero asumió la presidencia en noviembre de ese año."
+        explain: "Cananea fue una huelga minera en 1906 y Río Blanco una huelga textil en 1907."
+      },
+      {
+        q: "¿Qué declaró Díaz en 1908 al periodista Creelman?",
+        options: ["Que renunciaría de inmediato", "Que reformaría la Constitución de 1857", "Que no se postularía a las elecciones de 1910", "Que apoyaría a Madero"],
+        answer: 2,
+        explain: "Con esa declaración abrió la contienda sucesoria, aunque después se volvió a postular."
+      },
+      {
+        q: "¿Quién fundó el Partido Democrático?",
+        options: ["Bernardo Reyes", "Benito Juárez Meza, hijo de Juárez", "Ricardo Flores Magón", "Ramón Corral"],
+        answer: 1,
+        explain: "Benito Juárez Meza fundó el Partido Democrático para participar en la sucesión de 1910."
+      },
+      {
+        q: "El Plan de San Luis convocó a levantarse en armas el…",
+        options: ["5 de octubre de 1910 a las seis de la mañana", "16 de septiembre de 1910", "20 de noviembre de 1910 a las seis de la tarde", "1 de enero de 1911"],
+        answer: 2,
+        explain: "El plan está fechado el 5 de octubre de 1910 y convocó a las armas el 20 de noviembre a las seis de la tarde."
+      },
+      {
+        q: "¿Qué pactaron los Tratados de Ciudad Juárez?",
+        options: ["La suspensión de las hostilidades y la renuncia de Díaz y Corral", "El reparto de tierras a los zapatistas", "El regreso de Díaz al poder", "La elección de Huerta como presidente"],
+        answer: 0,
+        explain: "Díaz se embarcó en Veracruz el 25 de mayo de 1911 y dijo: «Han soltado un tigre»."
+      },
+      {
+        q: "¿Por qué los zapatistas no dejaron las armas en 1911?",
+        options: ["Porque querían que Díaz volviera", "Porque exigían que primero se devolvieran las tierras usurpadas por los hacendados", "Porque apoyaban a Bernardo Reyes", "Porque querían nacionalizar los ferrocarriles"],
+        answer: 1,
+        explain: "Los zapatistas firmaron a fines de noviembre de 1911 el Plan de Ayala."
+      },
+      {
+        q: "¿Qué ocurrió durante la Decena Trágica?",
+        options: ["Madero derrotó a los sublevados en La Ciudadela", "Se firmó la Constitución de 1917", "Villa y Zapata entraron a la capital", "Madero y Pino Suárez fueron apresados y asesinados, y Huerta ocupó la presidencia"],
+        answer: 3,
+        explain: "Entre el 9 y el 19 de febrero de 1913 Huerta se alió con Félix Díaz y se quedó con el poder."
       }
     ]
   },
+
   {
     id: 2,
-    title: "Revolución Mexicana",
-    period: "1910 – 1920",
+    title: "La Revolución II: Huerta, constitucionalismo y Constitución de 1917",
+    period: "1913 – 1920",
     lesson: [
-      "## Madero y la esperanza democrática",
-      "Tras la renuncia de Díaz, Madero asumió la presidencia en noviembre de 1911. Su gobierno enfrentó la desconfianza de los porfiristas que quedaban en el poder y de los revolucionarios que esperaban cambios sociales más profundos, como la devolución de tierras. Madero impulsó la democracia electoral, pero no transformó la estructura económica ni la de la tierra.",
-      "## Zapata y el Plan de Ayala",
-      "Emiliano Zapata, líder campesino de Morelos, desconfió de Madero. En noviembre de 1911 proclamó el Plan de Ayala, que desconocía a Madero y exigía la restitución de tierras despojadas a los campesinos, con el lema \"Tierra y libertad\". El zapatismo se convirtió en uno de los movimientos agrarios más importantes de la Revolución.",
-      "## Rebeliones contra Madero",
-      "En 1912, Pascual Orozco se levantó en Chihuahua con el Plan de Chihuahua, y Félix Díaz, sobrino de Porfirio, se alzó en Veracruz. Madero enfrentó la presión de los antiguos porfiristas, de las haciendas y de la prensa, y su gobierno se debilitó progresivamente.",
-      "## La Decena Trágica y el asesinato de Madero",
-      "En febrero de 1913, durante la llamada Decena Trágica en la Ciudad de México, Félix Díaz y el general Victoriano Huerta se rebelaron contra el gobierno. Huerta pactó con los militares golpistas (el Pacto de la Embajada) y, tras traicionar a Madero, ordenó su aprehensión. Madero y el vicepresidente José María Pino Suárez fueron asesinados el 22 de febrero de 1913.",
-      "## Huerta y el Plan de Guadalupe",
-      "Huerta gobernó como dictador hasta julio de 1914. Venustiano Carranza, gobernador de Coahuila, lanzó en marzo de 1913 el Plan de Guadalupe, que desconocía a Huerta y convocó al Ejército Constitucionalista. Álvaro Obregón en Sonora y Francisco Villa en Chihuahua fueron jefes militares clave en la lucha contra Huerta.",
-      "## La división del bando revolucionario",
-      "Tras la caída de Huerta en 1914, los revolucionarios se dividieron. La Convención de Aguascalientes intentó unir a villistas y zapatistas contra Carranza, pero no llegó a un acuerdo y la guerra civil se impuso. Obregón derrotó a Villa en Celaya (1915) y Carranza quedó al frente del país. Villa siguió en armas hasta que, en 1916, atacó Columbus, Nuevo México; Estados Unidos envió una expedición punitiva para perseguirlo.",
-      "## Intervención estadounidense",
-      "En abril de 1914, tropas de Estados Unidos ocuparon Veracruz durante el conflicto contra Huerta. Esa ocupación generó rechazo nacionalista y fue parte del contexto de las tensiones entre ambos países durante la Revolución.",
-      "## La Constitución de 1917",
-      "El Congreso Constituyente se reunió en Querétaro y aprobó la Constitución de 1917, firmada el 5 de febrero. Mantuvo los principios liberales de 1857 y añadió derechos sociales. El artículo 3 estableció una educación laica y gratuita; el artículo 27 reconoció que la nación es propietaria originaria de tierras y aguas, y permitió la reforma agraria; el artículo 123 reconoció derechos laborales como la jornada de ocho horas y el salario mínimo.",
-      "## El fin de la lucha armada",
-      "Zapata fue asesinado en abril de 1919 en Chinameca, Morelos, en una emboscada preparada por Jesús Guajardo. En 1920 Carranza fue derrocado: Obregón y Adolfo de la Huerta proclamaron el Plan de Agua Prieta, y Carranza murió en mayo de 1920 en Tlaxcalantongo, Puebla. Villa fue asesinado en Parral, Chihuahua, en 1923.",
+      "## El gobierno de Huerta",
+      "El golpe contrarrevolucionario encabezado por Huerta encendió todavía más la lucha campesina, que se extendió por todo el país. Huerta buscó pacificar el país, planteó volver al pasado porfirista y sumó a sus filas a Orozco. Lo apoyaban los banqueros y los hacendados, es decir, el sector conservador que quería regresar al orden del porfiriato.",
+      "Huerta disolvió las cámaras y empezó a gobernar como dictador. Estados Unidos, que al principio lo había apoyado, no reconoció su gobierno, porque el presidente William Taft terminó su mandato y su lugar lo ocupó Woodrow Wilson.",
+      "Estados Unidos empezó a apoyar a los revolucionarios carrancistas, que se proveyeron de armas en la frontera, y bloqueó el puerto de Veracruz, por donde llegaban armas europeas para Huerta. Las facciones revolucionarias estuvieron unidas solamente mientras Huerta permaneció en el poder.",
+      "## El constitucionalismo",
+      "En Coahuila, el gobernador Venustiano Carranza se levantó en armas para promover la continuidad del maderismo, e inició el movimiento constitucionalista. Se llama así porque quería retomar los principios de la Constitución de 1857.",
+      "En la lucha contra Huerta fue importante la División del Norte, de Francisco Villa, y también el ejército del Noroeste, dirigido por Álvaro Obregón desde Sonora. Carranza no incorporó al ejército zapatista porque desconfiaba de las direcciones campesinas.",
+      "Mientras Villa avanzaba tomando ciudades, Carranza veía con recelo el liderazgo del «centauro del norte». El ejército zapatista avanzaba hacia la capital, pero fue el ejército de Obregón el que llegó primero a la Ciudad de México. Huerta renunció a la presidencia el 15 de julio de 1914 y Carranza asumió de manera provisional la presidencia.",
+      "Álvaro Obregón representaba a la pequeña burguesía nacionalista, en dos tendencias: una inclinada al desarrollo capitalista y otra atraída por las reivindicaciones campesinas y obreras, que lo acercaba al villismo. Era el ejército más fuerte del carrancismo, pero mantuvo su propia política y sirvió como mediador entre las facciones.",
+      "## La Convención de Aguascalientes (1914)",
+      "Tras la derrota de Huerta, los cuatro ejércitos triunfadores (carrancistas, obregonistas, villistas y zapatistas) estaban divididos y tenían posiciones políticas distintas. Por eso se organizó una convención de jefes militares en Aguascalientes, a partir del 10 de octubre de 1914. Los zapatistas pudieron asistir con voz, pero sin voto.",
+      "La Convención eligió como presidente interino al general Eulalio Gutiérrez. Terminó sin acuerdos sobre un programa de gobierno y con la ruptura entre los grupos revolucionarios, que se dividieron en dos bandos: villistas y zapatistas (ejércitos campesinos) por un lado, y constitucionalistas (obregonistas y carrancistas) por el otro. También surgieron dos gobiernos: el de Eulalio Gutiérrez y el de Venustiano Carranza.",
+      "El 4 de diciembre de 1914 Villa y Zapata se encontraron en Xochimilco. El 6 de diciembre vieron desde los balcones de Palacio Nacional el desfile de las tropas de la División del Norte y del Ejército Libertador del Sur. Después se fotografiaron juntos y se sentaron por turnos en la silla presidencial.",
+      "## La derrota del villismo",
+      "Pronto el gobierno de la Convención se mostró incapaz de hacer una política revolucionaria, mientras el constitucionalismo de Obregón y Carranza ganaba adeptos. Eulalio Gutiérrez y sus allegados se pasaron al bando de Obregón.",
+      "Carranza expidió una ley agraria y un programa social, aunque después se negó a aplicarlo totalmente, para atraer a las masas campesinas y debilitar a Villa y a Zapata. Obregón tomó Puebla y la Ciudad de México y fue a combatir a Villa al norte, a quien derrotó en cuatro batallas decisivas. Así Carranza volvió a establecer su gobierno en la capital.",
+      "## El Congreso Constituyente y la Constitución de 1917",
+      "Carranza volvió a convocar un congreso en Querétaro, pero esta vez solo estuvieron los representantes de la facción triunfadora: obregonistas y carrancistas. De ahí salió una nueva Constitución con la que Carranza no estuvo de acuerdo, porque él quería solamente reformar la de 1857 y no incluir las demandas sociales prometidas durante la Revolución. En el Congreso hubo dos corrientes: una propuesta conservadora, que apoyaba el proyecto de Carranza, y una propuesta radical, que quería introducir reformas profundas.",
+      "La Constitución de 1917 incluyó demandas sociales, legisló sobre derechos de obreros y campesinos y fue nacionalista y antiimperialista, porque defendía el interés nacional por encima del extranjero. Tiene tres partes: la parte orgánica (establece la república federal y la organización política), las garantías individuales (derechos de los ciudadanos) y las garantías sociales (artículos 3, 27 y 123: derecho a la educación, a la propiedad de la tierra, al trabajo y a la organización sindical).",
+      "## Los artículos más importantes",
+      "Artículo 3: la educación que imparta el Estado será laica, libre y gratuita, y desarrollará armónicamente todas las facultades del ser humano.",
+      "Artículo 5: libertad de profesión, industria, comercio y trabajo. Nadie puede ser obligado a prestar trabajos personales sin justa retribución y sin su consentimiento.",
+      "Artículo 27: la propiedad de las tierras y aguas corresponde a la nación, que puede transmitir el dominio a los particulares y así constituir la propiedad privada.",
+      "Artículo 28: quedan prohibidos los monopolios privados y la exención de impuestos.",
+      "Artículo 123: toda persona tiene derecho al trabajo digno y socialmente útil. Jornada de 8 horas, salario mínimo, prohibición del trabajo de menores de 14 años, entre otros derechos.",
+      "Artículo 130: separación entre las funciones de la Iglesia y del Estado. Los ministros de culto no deben hacer proselitismo político ni participar como institución en actividades políticas.",
+      "Los artículos 27, 28 y 123 afectaban los intereses de Estados Unidos y también los de la Iglesia. Muchas de estas reformas no se harían realidad sino hasta tiempo después.",
+      "## El fin de la etapa armada (1917–1920)",
+      "Carranza fue electo presidente en 1917. Obregón se retiró a Sonora porque no estaba de acuerdo con la forma de hacer política de Carranza, que no quería aplicar las reformas sociales ni respetar la nueva Constitución.",
+      "En 1919 Zapata fue asesinado a traición por el general carrancista René Guajardo. Fue el primero de los cuatro caudillos más importantes en morir asesinado. Carranza frenó el reparto agrario y devolvió tierras a latifundistas del porfiriato.",
+      "A mediados de 1919 Obregón lanzó su candidatura a la presidencia para el periodo 1920–1924, con el argumento de que no se habían cumplido las promesas de la Revolución, y aseguró el apoyo de los zapatistas. Carranza abandonó la capital y, camino a Veracruz, fue asesinado mientras dormía el 21 de mayo de 1920. Adolfo de la Huerta, después de rebelarse, fue elegido interino, y con ello el Grupo Sonora llegó al poder.",
+      "Obregón triunfó en las elecciones y logró la rendición de Villa, que pidió una hacienda y una escolta. Villa fue asesinado en una emboscada en 1923, cuando se sospechaba que pretendía levantarse otra vez en armas.",
       "## Para el examen",
-      "Ideas clave: la Revolución tuvo causas políticas (la no reelección), agrarias (la tierra) y sociales (los obreros); las facciones se enfrentaron entre sí; la Constitución de 1917 es el resultado jurídico del movimiento. Fechas: 1910 (inicio), 1911 (Plan de Ayala y gobierno de Madero), 1913 (Decena Trágica y Plan de Guadalupe), 1914 (caída de Huerta), 1917 (Constitución), 1919 (muerte de Zapata), 1920 (fin del gobierno de Carranza)."
+      "Ideas clave: Huerta fue un dictador apoyado por conservadores, y Estados Unidos (con Wilson) no lo reconoció; los constitucionalistas querían volver a la Constitución de 1857; Huerta renunció el 15 de julio de 1914; la Convención de Aguascalientes (octubre de 1914) dividió a los revolucionarios en villistas-zapatistas y constitucionalistas; Obregón derrotó a Villa en cuatro batallas; la Constitución de 1917 incluyó demandas sociales (artículos 3, 27 y 123); Zapata murió en 1919, Carranza en 1920 y Villa en 1923."
     ],
-    game: null,
     quiz: [
       {
-        q: "¿Qué lema caracterizó el Plan de Ayala de Emiliano Zapata?",
-        options: ["Orden y progreso", "Tierra y libertad", "Sufragio efectivo", "Pan y trabajo"],
+        q: "¿Por qué se llamó «constitucionalista» el movimiento de Carranza?",
+        options: ["Porque quería redactar una Constitución socialista", "Porque quería retomar los principios de la Constitución de 1857", "Porque apoyaba a Huerta", "Porque defendía el reparto de tierras"],
         answer: 1,
-        explain: "El Plan de Ayala (1911) exigía la restitución de tierras a los campesinos con el lema \"Tierra y libertad\"."
+        explain: "Carranza, gobernador de Coahuila, promovía la continuidad del maderismo y de la Constitución de 1857."
       },
       {
-        q: "¿Qué hecho de febrero de 1913 terminó con el asesinato de Madero y Pino Suárez?",
-        options: ["La Decena Trágica", "La Batalla de Celaya", "La Convención de Aguascalientes", "La huelga de Río Blanco"],
+        q: "¿Por qué Estados Unidos dejó de apoyar a Huerta?",
+        options: ["Porque Huerta nacionalizó el petróleo", "Porque Huerta aceptó a los zapatistas", "Porque Taft concluyó su mandato y lo sustituyó Woodrow Wilson, que no lo reconoció", "Porque Huerta firmó la Constitución de 1917"],
+        answer: 2,
+        explain: "Además, Estados Unidos dio armas a los carrancistas y bloqueó Veracruz, por donde llegaban armas europeas para Huerta."
+      },
+      {
+        q: "¿Cuándo renunció Huerta a la presidencia?",
+        options: ["El 15 de julio de 1914", "El 22 de febrero de 1913", "El 20 de noviembre de 1910", "El 5 de febrero de 1917"],
         answer: 0,
-        explain: "Durante la Decena Trágica, Huerta traicionó a Madero, quien fue asesinado el 22 de febrero de 1913."
+        explain: "Tras su renuncia, Carranza asumió de manera provisional la presidencia."
       },
       {
-        q: "¿Qué plan proclamó Venustiano Carranza en marzo de 1913 para desconocer a Huerta?",
-        options: ["Plan de Guadalupe", "Plan de Ayala", "Plan de San Luis", "Plan de Agua Prieta"],
-        answer: 0,
-        explain: "El Plan de Guadalupe desconoció a Huerta y dio origen al Ejército Constitucionalista."
+        q: "¿Qué ejército dirigido por Obregón actuó en la lucha contra Huerta?",
+        options: ["La División del Norte", "El Ejército Libertador del Sur", "El ejército del Noroeste, desde Sonora", "El ejército federal"],
+        answer: 2,
+        explain: "La División del Norte era de Villa y el Ejército Libertador del Sur, de Zapata."
       },
       {
-        q: "¿En qué ciudad se firmó la Constitución de 1917?",
-        options: ["Querétaro", "Aguascalientes", "Chihuahua", "Puebla"],
-        answer: 0,
-        explain: "El Congreso Constituyente se reunió en Querétaro y firmó la Constitución el 5 de febrero de 1917."
-      },
-      {
-        q: "¿Qué artículo de la Constitución de 1917 reconoció que la nación es la propietaria originaria de tierras y aguas?",
-        options: ["Artículo 3", "Artículo 27", "Artículo 123", "Artículo 130"],
+        q: "¿Qué pasó con los zapatistas en la Convención de Aguascalientes?",
+        options: ["Eligieron al presidente interino", "Asistieron con voz, pero sin voto", "No fueron invitados", "Votaron por Carranza"],
         answer: 1,
-        explain: "El artículo 27 fundamentó la reforma agraria y el control del subsuelo. El 3 se refiere a la educación y el 123 a los derechos laborales."
+        explain: "La Convención comenzó el 10 de octubre de 1914 y eligió como presidente interino a Eulalio Gutiérrez."
       },
       {
-        q: "¿Qué artículo estableció la educación laica y gratuita?",
-        options: ["Artículo 3", "Artículo 27", "Artículo 123", "Artículo 130"],
-        answer: 0,
-        explain: "El artículo 3 estableció una educación laica y gratuita; el 130 regula la relación entre Iglesia y Estado."
-      },
-      {
-        q: "¿En qué año fue asesinado Emiliano Zapata?",
-        options: ["1916", "1919", "1920", "1923"],
+        q: "¿En qué dos bandos se dividieron los revolucionarios después de la Convención?",
+        options: ["Maderistas y huertistas", "Villistas-zapatistas y constitucionalistas (obregonistas y carrancistas)", "Orozquistas y reyistas", "Liberales y conservadores"],
         answer: 1,
-        explain: "Zapata fue asesinado en abril de 1919 en Chinameca, Morelos. Villa murió en 1923 en Parral."
+        explain: "Surgieron también dos gobiernos: el de Eulalio Gutiérrez y el de Venustiano Carranza."
       },
       {
-        q: "¿Qué expedición estadounidense persiguió a Villa tras el ataque a Columbus en 1916?",
-        options: ["La expedición punitiva de Pershing", "La ocupación de Veracruz", "El Plan de Guadalupe", "El Pacto de la Embajada"],
+        q: "¿Qué artículo de la Constitución de 1917 establece la jornada de 8 horas y el salario mínimo?",
+        options: ["El artículo 3", "El artículo 27", "El artículo 130", "El artículo 123"],
+        answer: 3,
+        explain: "El artículo 123 trata del trabajo digno, la jornada de 8 horas, el salario mínimo y la prohibición del trabajo de menores de 14 años."
+      },
+      {
+        q: "¿Qué dispone el artículo 27 de la Constitución de 1917?",
+        options: ["La propiedad de tierras y aguas corresponde a la nación, que puede transmitirla a particulares", "La educación será laica, libre y gratuita", "Separación entre la Iglesia y el Estado", "Se prohíben los monopolios privados"],
         answer: 0,
-        explain: "Tras el ataque a Columbus, Estados Unidos envió la expedición punitiva del general Pershing para perseguir a Villa."
+        explain: "El artículo 3 es el de educación, el 130 es el de la separación Iglesia–Estado y el 28 prohíbe los monopolios."
       }
     ]
   },
+
   {
     id: 3,
-    title: "México posrevolucionario",
-    period: "1920 – 1940",
+    title: "Los gobiernos posrevolucionarios y el Maximato",
+    period: "1920 – 1934",
     lesson: [
-      "## Reconstrucción tras la lucha armada",
-      "Tras el asesinato de Carranza, Álvaro Obregón gobernó de 1920 a 1924. Su objetivo fue pacificar al país, negociar con militares, campesinos y obreros, y reconstruir las instituciones. Obregón controló a los caudillos con concesiones y con el reparto de tierras limitado.",
-      "## Educación: Vasconcelos y las misiones",
-      "En 1921 se creó la Secretaría de Educación Pública (SEP), a cargo de José Vasconcelos. Su proyecto incluyó la campaña de alfabetización, la construcción de bibliotecas, las misiones culturales que llevaban maestros al campo y el impulso al arte público: los muralistas Diego Rivera, José Clemente Orozco y David Alfaro Siqueiros pintaron murales en edificios públicos. Después, Moisés Sáenz impulsó la escuela rural mexicana.",
-      "## Calles y el Maximato",
-      "Plutarco Elías Calles gobernó de 1924 a 1928. Aunque no se reeligió de inmediato, siguió controlando la política desde atrás durante el llamado Maximato (1928–1934), en el que Calles era conocido como el \"Jefe Máximo\". En 1929 fundó el Partido Nacional Revolucionario (PNR), antecedente del PRI, para concentrar a las facciones revolucionarias en una sola organización.",
-      "## La Guerra Cristera",
-      "La aplicación de leyes anticlericales, como las reformas al Código Penal de 1926 conocidas como la Ley Calles, enfrentó al gobierno con la Iglesia católica y con campesinos católicos. Así estalló la Guerra Cristera (1926–1929), que dejó miles de víctimas. Terminó con los acuerdos de 1929, mediados por Estados Unidos mediante el embajador Dwight Morrow, que permitieron reabrir los templos.",
-      "## Lázaro Cárdenas y la reforma agraria",
-      "Lázaro Cárdenas gobernó de 1934 a 1940, con una política de izquierda y gran apoyo popular. Repartió cerca de 18 millones de hectáreas, con las que se crearon ejidos, más que todos los gobiernos anteriores juntos. También impulsó la educación socialista, reformando el artículo 3 en 1934.",
-      "## Organización obrera y campesina",
-      "En 1936 se fundó la Confederación de Trabajadores de México (CTM), dirigida por Vicente Lombardo Toledano, que agrupó a los sindicatos. En 1938 se creó la Confederación Nacional Campesina (CNC), que organizó a los ejidatarios. El gobierno buscó alianzas con los obreros y campesinos a cambio de apoyo al Estado.",
-      "## Nacionalización de ferrocarriles y petróleo",
-      "En 1937 el gobierno nacionalizó los ferrocarriles. Ese mismo año, los trabajadores petroleros de compañías extranjeras emplazaron a huelga. Tras el fallo de la Suprema Corte a favor de los trabajadores y el rechazo de las compañías a cumplirlo, el 18 de marzo de 1938 Cárdenas decretó la expropiación petrolera. En junio de 1938 se creó Petróleos Mexicanos (Pemex).",
-      "## El PRM: un partido por sectores",
-      "En 1938 Cárdenas transformó el PNR en el Partido de la Revolución Mexicana (PRM), organizado en cuatro sectores: obrero, campesino, popular y militar. Este diseño corporativo, que en 1946 se convertiría en el PRI, permitió controlar la política durante décadas.",
+      "## De los caudillos a las instituciones",
+      "A partir de 1920 comenzaron a surgir en México gobiernos caudillistas, basados en un poder personalizado, no institucional. Tras el asesinato de Carranza, llegó al poder el Grupo Sonora, integrado por Álvaro Obregón, Plutarco Elías Calles y Adolfo de la Huerta. La tarea de estos gobiernos fue la institucionalización del país y la reestructuración de la economía.",
+      "Gobernantes del periodo: Venustiano Carranza (1917–1920); Adolfo de la Huerta, interino durante algunos meses de 1920; Álvaro Obregón (1920–1924); Plutarco Elías Calles (1924–1928); el Maximato (1928–1934); y Lázaro Cárdenas (1934–1940).",
+      "## Álvaro Obregón (1920–1924)",
+      "Obregón tuvo una base de apoyo campesina y su bandera fue el reparto agrario. Repartió más de 1 170 000 hectáreas, que beneficiaron a 400 000 personas. Creó la Secretaría de Educación Pública (SEP), cuyo primer titular fue José Vasconcelos.",
+      "## José Vasconcelos y el proyecto cultural",
+      "Vasconcelos (1882–1959) encabezó el proyecto cultural y educativo posrevolucionario. Se instauró un modelo de escuelas rurales. La educación se concebía como una «misión evangelizadora». Los maestros centraban la enseñanza en actividades manuales, como el cultivo de la tierra y las pequeñas industrias, y se incorporó a las minorías indígenas al sistema escolar nacional.",
+      "Fue el secretario de educación más innovador en la promoción del libro. Editó manuales escolares, revistas, libros clásicos y lecturas para niños. Fundó bibliotecas en centros urbanos, escuelas, fábricas y comunidades indígenas. La colección de clásicos tuvo tirajes de 25 000 ejemplares de autores como Esquilo, Sófocles, Platón, Dante, Shakespeare, Cervantes, Goethe y Tolstoi. Cuando dejó la secretaría había 1 916 bibliotecas y se habían repartido 297 103 libros.",
+      "Daniel Cosío Villegas, fundador del Fondo de Cultura Económica, de El Colegio de México y de El Colegio Nacional, explicó la idea así: el indio y el pobre, tradicionalmente postergados, debían ser un soporte principal y visible de la nueva sociedad, pero también era necesario lanzarlos a la corriente cultural universal, dándoles a leer las grandes obras de la humanidad.",
+      "## El muralismo mexicano",
+      "Vasconcelos reunió a pintores como Diego Rivera, José Clemente Orozco y David Alfaro Siqueiros para pintar los edificios públicos, como un renacimiento cultural del país. Su lema fue «la redención social a través del arte». Entre las obras que se estudian: de Diego Rivera, «Día de muertos» y «Quema de los Judas» (frescos en la SEP), «La sangre de los mártires» y «La tierra dormida» (capilla de Chapingo), «El México antiguo» (escalera de Palacio Nacional) y «De la conquista a 1930» (Palacio Nacional); de Siqueiros, «Retrato actual de México» (Santa Bárbara, California).",
+      "El poeta Octavio Paz resumió la relación entre arte y Revolución: sin la Revolución estos artistas no se habrían expresado, y sin la obra de los muralistas la Revolución no habría sido lo que fue.",
+      "## Plutarco Elías Calles (1924–1928)",
+      "Calles concretó su base de apoyo en los obreros. Buscó que el reparto agrario no se quedara en eso, sino que garantizara la producción. Realizó una reforma hacendaria para que el Estado obtuviera más ingresos. En 1925 creó el Banco de México, con 51 % de capital público y 49 % de capital privado. Se construyeron carreteras, escuelas y edificios públicos que ampliaron la infraestructura económica. En síntesis, Calles buscó desmilitarizar la política.",
+      "## La Guerra Cristera (1926–1929)",
+      "En 1926 comenzó una pugna violenta entre la Iglesia católica y el Estado, conocida como Guerra Cristera. El conflicto se desató cuando el gobierno dictó leyes con el argumento de que a la Iglesia solo le correspondía el poder espiritual y no el civil, y se aplicaron los artículos 3, 27 y 130 de la Constitución. Se limitó el número de sacerdotes y se clausuraron iglesias y conventos.",
+      "La guerra tuvo un carácter fundamentalmente rural. Hasta 1929 el ejército cristero se disolvió y la Iglesia reanudó los servicios religiosos.",
+      "## La crisis de 1928: el asesinato de Obregón",
+      "La sucesión de 1928 provocó otra crisis política, pues Obregón y Calles se habían distanciado. Por presión de Obregón, Calles modificó la Constitución para permitir la reelección siempre que no fuera inmediata, y el periodo presidencial pasó de 4 a 6 años. Las elecciones fueron el 1 de julio de 1928 y Obregón ganó, pero fue asesinado por José de León Toral, un fanático religioso.",
+      "Emilio Portes Gil ocupó provisionalmente la presidencia para conciliar a obregonistas y callistas. A partir de entonces Calles fue considerado el «Jefe Máximo» de la Revolución. En su último informe de gobierno, el 1 de septiembre de 1928, Calles afirmó que terminaba la era de los caudillos y empezaba el México de las instituciones, y anunció la creación de un partido político.",
+      "## El Partido Nacional Revolucionario (PNR)",
+      "Calles se convirtió en el primer presidente del partido, que según se dijo agruparía a todas las corrientes políticas que participaron en la Revolución.",
+      "## El Maximato (1928–1934)",
+      "Se llama Maximato al periodo de 1928 a 1934, porque Plutarco Elías Calles, el «Jefe Máximo», tenía el poder real sin ocupar la silla presidencial. En esos seis años gobernaron tres presidentes: Emilio Portes Gil, Pascual Ortiz Rubio y Abelardo Rodríguez. Calles controlaba el PNR y, por tanto, a los candidatos a ocupar los cargos en las cámaras. Este periodo marca el tránsito del caudillismo (poder personalizado) a la institucionalidad (poder organizado con base en leyes e instituciones).",
+      "Emilio Portes Gil (1928–1930): continuó el reparto agrario, terminó la Guerra Cristera, se creó el PNR y se prepararon las elecciones de 1929. Ante un conflicto estudiantil por la rectoría, concedió la autonomía a la Universidad. El primer candidato del PNR a la presidencia fue Pascual Ortiz Rubio. Vasconcelos se opuso a Calles y se lanzó como candidato en 1929 con apoyo universitario, pero obtuvo unos 100 000 votos frente a los 2 millones de Ortiz Rubio.",
+      "Pascual Ortiz Rubio (1930–1932): intentó quitarse la tutela de Calles, pero no lo logró, porque Calles impuso a varios funcionarios. Frenaron el reparto agrario porque consideraban más rentable la propiedad privada que la ejidal, y en 1930 el gobierno dijo que ya no había tierras por repartir. Renunció el 2 de septiembre de 1932.",
+      "Abelardo Rodríguez (1932–1934): general muy cercano a Calles. Preparó las elecciones de 1934, en las que había dos candidatos: Adalberto Tejeda y Lázaro Cárdenas. Cárdenas tenía gran popularidad entre los campesinos beneficiados por el reparto agrario cuando fue gobernador de Michoacán.",
+      "## La economía durante el Maximato",
+      "Los años del Maximato coincidieron con la crisis mundial de 1929. Afectó a México, pero no de forma devastadora, porque la economía mexicana no estaba totalmente capitalizada. El 70 % de la población se dedicaba a la agricultura, el 14 % a la industria y el 16 % a los servicios. Los gobiernos del Maximato dejaron que el capital estadounidense invirtiera más en las finanzas de México.",
       "## Para el examen",
-      "Ideas clave: el Estado posrevolucionario buscó institucionalizar la Revolución; la educación, la tierra y el petróleo fueron pilares de la reconstrucción; el poder se concentró en un partido corporativo. Fechas: 1921 (SEP), 1926–1929 (Guerra Cristera), 1929 (PNR), 1934 (educación socialista), 1936 (CTM), 1938 (expropiación petrolera y PRM)."
+      "Ideas clave: el periodo va del caudillismo (poder personal) a las instituciones; Obregón repartió tierra y creó la SEP; Vasconcelos impulsó escuelas rurales, bibliotecas, ediciones de clásicos y el muralismo; Calles creó el Banco de México (1925) y enfrentó la Guerra Cristera (1926–1929); Obregón, reelecto, fue asesinado en 1928; en el Maximato (1928–1934) gobernaron Portes Gil, Ortiz Rubio y Rodríguez, pero mandaba Calles; el PNR (1929) fue el partido del régimen."
     ],
-    game: null,
     quiz: [
       {
-        q: "¿Quién fue el primer secretario de Educación Pública al crearse la SEP en 1921?",
-        options: ["José Vasconcelos", "Plutarco Elías Calles", "Lázaro Cárdenas", "Álvaro Obregón"],
-        answer: 0,
-        explain: "José Vasconcelos encabezó la SEP, impulsó la alfabetización y las misiones culturales."
-      },
-      {
-        q: "¿Cómo se llamó el periodo en que Calles controló la política desde atrás, entre 1928 y 1934?",
-        options: ["Maximato", "Milagro mexicano", "Desarrollo estabilizador", "Apertura democrática"],
-        answer: 0,
-        explain: "El Maximato (1928–1934) recibió su nombre por el título de \"Jefe Máximo\" de Calles."
-      },
-      {
-        q: "¿Qué partido fundó Calles en 1929?",
-        options: ["PAN", "PNR", "PRM", "PRI"],
+        q: "¿Quiénes formaban el Grupo Sonora que llegó al poder en 1920?",
+        options: ["Madero, Pino Suárez y Huerta", "Obregón, Calles y Adolfo de la Huerta", "Carranza, Villa y Zapata", "Portes Gil, Ortiz Rubio y Rodríguez"],
         answer: 1,
-        explain: "El PNR se fundó en 1929 y en 1938 se convirtió en el PRM; en 1946 pasó a llamarse PRI."
+        explain: "El Grupo Sonora llegó al poder tras el asesinato de Carranza."
       },
       {
-        q: "¿Qué conflicto enfrentó al gobierno con grupos católicos entre 1926 y 1929?",
-        options: ["La Guerra Cristera", "La Guerra de Castas", "La Guerra de Reforma", "La Guerra de Independencia"],
-        answer: 0,
-        explain: "La Guerra Cristera fue detonada por la aplicación de leyes anticlericales y terminó con los acuerdos de 1929."
-      },
-      {
-        q: "¿Aproximadamente cuántas hectáreas repartió Cárdenas durante su gobierno?",
-        options: ["2 millones", "5 millones", "18 millones", "50 millones"],
+        q: "¿Quién fue el primer titular de la Secretaría de Educación Pública?",
+        options: ["Justo Sierra", "Daniel Cosío Villegas", "José Vasconcelos", "Plutarco Elías Calles"],
         answer: 2,
-        explain: "Cárdenas repartió cerca de 18 millones de hectáreas, creando ejidos."
+        explain: "La SEP se creó durante el gobierno de Obregón."
       },
       {
-        q: "¿En qué año se expropió la industria petrolera?",
-        options: ["1917", "1921", "1938", "1946"],
-        answer: 2,
-        explain: "El 18 de marzo de 1938 Cárdenas decretó la expropiación petrolera; en junio se creó Pemex."
+        q: "¿Qué lema se asocia al muralismo impulsado por Vasconcelos?",
+        options: ["«Sufragio efectivo, no reelección»", "«La redención social a través del arte»", "«Tierra y libertad»", "«Primero crear la riqueza»"],
+        answer: 1,
+        explain: "Vasconcelos reunió a Rivera, Orozco y Siqueiros para pintar edificios públicos."
       },
       {
-        q: "¿Qué organización obrera fundó Vicente Lombardo Toledano en 1936?",
-        options: ["CTM", "CNC", "CROM", "PNR"],
+        q: "¿Qué institución creó Calles en 1925, con 51 % de capital público y 49 % privado?",
+        options: ["El Banco de México", "El IMSS", "Petróleos Mexicanos", "La Universidad Nacional"],
         answer: 0,
-        explain: "La Confederación de Trabajadores de México (CTM) se fundó en 1936. La CNC agrupó a los campesinos desde 1938."
+        explain: "También se construyeron carreteras, escuelas y edificios públicos."
+      },
+      {
+        q: "¿Qué fue la Guerra Cristera?",
+        options: ["Una guerra entre México y Estados Unidos", "Un conflicto entre la Iglesia católica y el Estado, principalmente rural, de 1926 a 1929", "Una huelga de ferrocarrileros", "Una rebelión de Pascual Orozco"],
+        answer: 1,
+        explain: "El gobierno aplicó los artículos 3, 27 y 130, limitó el número de sacerdotes y cerró iglesias."
+      },
+      {
+        q: "¿Quién asesinó a Álvaro Obregón en 1928, cuando ya había ganado la reelección?",
+        options: ["René Guajardo", "Victoriano Huerta", "José de León Toral, un fanático religioso", "Emilio Portes Gil"],
+        answer: 2,
+        explain: "Tras el asesinato, Portes Gil ocupó provisionalmente la presidencia."
+      },
+      {
+        q: "¿Por qué se llama Maximato al periodo 1928–1934?",
+        options: ["Porque Calles, el «Jefe Máximo», mandaba sin ser el presidente", "Porque Obregón volvió a gobernar", "Porque hubo seis presidentes", "Porque se creó el IMSS"],
+        answer: 0,
+        explain: "Calles controlaba el PNR y ejercía un gran dominio sobre los presidentes."
+      },
+      {
+        q: "¿Qué resultado tuvo Vasconcelos como candidato en las elecciones de 1929?",
+        options: ["Ganó con apoyo campesino", "Obtuvo unos 100 000 votos frente a 2 millones de Ortiz Rubio", "Se retiró antes de la elección", "Empató con Ortiz Rubio"],
+        answer: 1,
+        explain: "Vasconcelos tenía apoyo universitario y se opuso a la política de Calles."
+      }
+    ]
+  },
+
+  {
+    id: 4,
+    title: "Lázaro Cárdenas y la expropiación petrolera",
+    period: "1934 – 1940",
+    lesson: [
+      "## Cómo llegó Cárdenas a la presidencia",
+      "Los tres candidatos presidenciales para el sexenio 1934–1940 fueron Manuel Pérez Treviño, Lázaro Cárdenas y Adalberto Tejeda. Calles favoreció la candidatura del entonces presidente del PNR, Manuel Pérez Treviño, pero la presión de las filas intermedias del partido logró que Calles aceptara la nominación de Cárdenas.",
+      "## Las tres etapas del gobierno",
+      "Primera etapa (1934–1936): conviven los intereses cardenistas con los callistas. Termina cuando Calles es expulsado del juego político.",
+      "Segunda etapa (1936–1938): Cárdenas consolida su política de reformas. Culmina con la transformación del PNR en PRM y con la nacionalización de la industria petrolera.",
+      "Tercera etapa (1938–1940): repliegue y freno a las reformas, por la presión de grupos conservadores y por la sucesión presidencial.",
+      "## El Plan Sexenal",
+      "El Plan Sexenal fue el primer programa de gobierno que debía cumplir un presidente de la República. Fue un intento de poner en práctica los principios de la Constitución de 1917 que los gobiernos anteriores no habían cumplido. En su elaboración participaron callistas y pro-reformistas, encabezados por Cárdenas.",
+      "Sus aspectos principales: considerar al Estado como rector de la economía; elevar el nivel cultural y económico de los trabajadores de la ciudad y del campo; luchar contra los privilegios y la gran propiedad agraria; crear sindicatos que defendieran los derechos de los trabajadores; capacitar a los campesinos e industrializar el campo; impulsar la educación socialista (laica, científica y obligatoria); mejorar la atención médica, sobre todo en zonas rurales; nacionalizar los bienes del suelo y del subsuelo, como el petróleo y la minería; y apoyar a las empresas nacionales y regular la actividad de las extranjeras.",
+      "## Nacionalismo económico y capitalismo de Estado",
+      "Cárdenas antepuso los intereses nacionales a los extranjeros, lo que se conoce como nacionalismo económico, como lo expresa el artículo 27 constitucional. El propósito final del capitalismo de Estado era convertir la economía mexicana en una economía autosuficiente. En agosto de 1935 entró en vigor la Ley de Nacionalización, y en noviembre de 1936, la Ley de Expropiación, que puso en vigor el artículo 27.",
+      "Según la Ley de Expropiación, el gobierno podía expropiar para la defensa, conservación, desarrollo o uso productivo de los elementos naturales; para la igual distribución de la riqueza; y para crear y conservar empresas en beneficio de la población.",
+      "El 27 de junio de 1937 los ferrocarriles fueron completamente nacionalizados, y los accionistas fueron indemnizados de acuerdo con el valor de sus acciones.",
+      "## La expropiación petrolera (18 de marzo de 1938)",
+      "Las empresas petroleras (sobre todo holandesas, inglesas y estadounidenses) pagaban bajos impuestos y violaban las leyes mexicanas. Petromex, la compañía del Estado, solo extraía el 1.5 % del petróleo. En 1936, 21 sindicatos petroleros independientes se fusionaron en uno solo y exigieron aumento salarial, mejores prestaciones y semana laboral de 40 horas. Las compañías rechazaron por completo las demandas.",
+      "El gobierno actuó con base en el artículo 123 y ordenó a las compañías cumplir las peticiones de los obreros, pero no hicieron caso. Entonces, el 18 de marzo de 1938, el presidente Lázaro Cárdenas decretó la expropiación-nacionalización de la industria petrolera a favor de la nación.",
+      "Las consecuencias llegaron pronto: las compañías reclamaron su indemnización con una tasa de interés muy alta y a México se le negó el crédito que solicitó.",
+      "## Instituciones, partido y economía",
+      "Cárdenas creó varias instituciones para promover la infraestructura industrial: Ferrocarriles Nacionales, Petróleos Mexicanos, la Comisión Federal de Electricidad y la Comisión de Fomento Minero.",
+      "El PNR se convirtió en el Partido de la Revolución Mexicana (PRM), integrado por cuatro sectores: el obrero, el campesino, el popular y el militar, aunque este último duró poco. La afiliación al partido era colectiva y no individual. Cárdenas reestructuró así el partido para dar cabida a quienes apoyaban su política, dejando fuera a los empresarios.",
+      "El peso se devaluó en 1938 y eso generó una crisis económica que los anticardenistas aprovecharon para atacar al presidente. En sus últimos años Cárdenas tuvo que ser más moderado, por presiones internas y externas de grupos formados por excombatientes cristeros y por la Iglesia católica.",
+      "En 1939 se creó el Partido Acción Nacional (PAN), formado por grupos urbanos de clase media, pequeños comerciantes conservadores y críticos de la Revolución, que se oponían a la intervención del Estado en la economía y promovían el libre mercado.",
+      "## Educación y política internacional",
+      "Se buscó una educación laica, científica, libre, gratuita y obligatoria, con enfoque social, cercana a las masas populares. Se creó el Instituto Politécnico Nacional (IPN) para formar los profesionistas que el país necesitaba en su proceso de industrialización. Se creó La Casa de España en México, institución especializada en ciencias sociales, historia y filosofía, que dio albergue a los republicanos españoles que huían de la dictadura de Franco.",
+      "También se dio asilo político a León Trotsky. En política internacional, Cárdenas se manifestó contra el nazismo y contra el avance imperialista.",
+      "## Para el examen",
+      "Ideas clave: Cárdenas llegó con apoyo de las filas intermedias del PNR; su gobierno tuvo tres etapas; el Plan Sexenal fue el primer programa de gobierno; hubo nacionalismo económico y capitalismo de Estado; los ferrocarriles se nacionalizaron en 1937 y el petróleo el 18 de marzo de 1938; el PNR pasó a ser PRM con cuatro sectores; en 1939 nació el PAN; se fundó el IPN y se dio asilo a republicanos españoles y a Trotsky.",
+      "Nota para el estudiante: en la presentación sobre los gobiernos posrevolucionarios aparece que Calles prefería a Tejeda, y en la de Cárdenas, que prefería a Pérez Treviño. Si el maestro pregunta, usa la versión de la presentación de Cárdenas: Pérez Treviño."
+    ],
+    quiz: [
+      {
+        q: "¿Cuáles fueron los tres candidatos para el sexenio 1934–1940?",
+        options: ["Calles, Obregón y Cárdenas", "Pérez Treviño, Cárdenas y Tejeda", "Ortiz Rubio, Portes Gil y Vasconcelos", "Cárdenas, Alemán y Ávila Camacho"],
+        answer: 1,
+        explain: "Calles prefería a Pérez Treviño, pero la presión de las filas intermedias del partido logró que aceptara a Cárdenas."
+      },
+      {
+        q: "¿Qué fue el Plan Sexenal?",
+        options: ["Un tratado con Estados Unidos", "El primer programa de gobierno que debía cumplir un presidente", "Una ley electoral", "Un plan para repartir el petróleo a empresas extranjeras"],
+        answer: 1,
+        explain: "Intentó poner en práctica los principios de la Constitución de 1917."
+      },
+      {
+        q: "¿Cómo se llama la política que antepone los intereses nacionales a los extranjeros, según el artículo 27?",
+        options: ["Libre mercado", "Nacionalismo económico", "Mexicanización", "Desarrollo estabilizador"],
+        answer: 1,
+        explain: "Su idea final, el capitalismo de Estado, era lograr una economía autosuficiente."
+      },
+      {
+        q: "¿Cuándo se nacionalizaron completamente los ferrocarriles?",
+        options: ["El 18 de marzo de 1938", "El 27 de junio de 1937", "En agosto de 1935", "En 1939"],
+        answer: 1,
+        explain: "Los accionistas fueron indemnizados de acuerdo con el valor de sus acciones."
+      },
+      {
+        q: "¿Qué pasó en 1936 en el sector petrolero?",
+        options: ["Se fundó Pemex", "21 sindicatos independientes se fusionaron en uno y exigieron mejores salarios y 40 horas semanales", "Las empresas aceptaron las demandas", "Los obreros aceptaron bajar sus salarios"],
+        answer: 1,
+        explain: "Las compañías rechazaron las demandas y el gobierno actuó con base en el artículo 123."
+      },
+      {
+        q: "¿Qué decretó Cárdenas el 18 de marzo de 1938?",
+        options: ["La Ley de Expropiación", "La creación del IPN", "La expropiación-nacionalización de la industria petrolera", "La creación del PAN"],
+        answer: 2,
+        explain: "Las compañías reclamaron una indemnización con interés muy alto y se negó crédito a México."
       },
       {
         q: "¿Cuáles eran los cuatro sectores del PRM?",
-        options: [
-          "Obrero, campesino, popular y militar",
-          "Obrero, empresarial, religioso y urbano",
-          "Campesino, minero, estudiantil y militar",
-          "Obrero, estatal, popular y juvenil"
-        ],
+        options: ["Obrero, campesino, popular y militar", "Obrero, empresarial, popular y religioso", "Campesino, estudiantil, empresarial y militar", "Obrero, campesino, bancario y popular"],
         answer: 0,
-        explain: "El PRM se organizó en los sectores obrero, campesino, popular y militar, base del corporativismo del Estado."
+        explain: "El sector militar duró poco y la afiliación era colectiva."
+      },
+      {
+        q: "¿Qué institución educativa se creó para formar los profesionistas que necesitaba la industrialización?",
+        options: ["La UNAM", "El Colegio de México", "El Instituto Politécnico Nacional (IPN)", "La Escuela Nacional de Economía"],
+        answer: 2,
+        explain: "Además, La Casa de España dio albergue a republicanos españoles."
       }
     ]
   },
-  {
-    id: 4,
-    title: "Milagro mexicano",
-    period: "1940 – 1970",
-    lesson: [
-      "## Un modelo de crecimiento",
-      "Entre 1940 y 1970 México vivió un crecimiento económico sostenido, con inflación baja y una moneda estable. Este periodo se conoce como el \"milagro mexicano\" o desarrollo estabilizador. Se apoyó en la industrialización por sustitución de importaciones (ISI): producir en el país bienes que antes se compraban en el extranjero.",
-      "## Gobiernos y prioridades",
-      "Manuel Ávila Camacho (1940–1946) dio prioridad a la industria y buscó la conciliación con los empresarios. Miguel Alemán (1946–1952) impulsó la industrialización y las grandes obras de infraestructura, como presas, carreteras y la Ciudad Universitaria de la UNAM. Adolfo Ruiz Cortines (1952–1958) continuó el modelo, aunque tuvo que devaluar el peso en 1954.",
-      "## La estabilidad del peso",
-      "En 1954 el peso se devaluó de 8.65 a 12.50 pesos por dólar. A partir de entonces el tipo de cambio se mantuvo fijo durante más de dos décadas. Esa estabilidad atrajo inversión extranjera y permitió planear a largo plazo; por eso el periodo 1954–1970 se conoce como desarrollo estabilizador.",
-      "## Seguridad social y educación",
-      "En 1943 se creó el Instituto Mexicano del Seguro Social (IMSS), que dio atención médica y pensiones a los trabajadores formales. En 1959 el gobierno de Adolfo López Mateos entregó por primera vez los libros de texto gratuitos, una medida que llegó a millones de niños.",
-      "## Electricidad y comunicaciones",
-      "En 1960 López Mateos nacionalizó la industria eléctrica: las compañías privadas fueron adquiridas y la Comisión Federal de Electricidad (CFE) quedó como el principal proveedor del servicio. La infraestructura de energía, carreteras y telecomunicaciones fue clave para la industrialización.",
-      "## El campo y el Programa Bracero",
-      "La agricultura comercial creció en el norte del país, mientras muchos pequeños campesinos quedaron rezagados. Entre 1942 y 1964 miles de trabajadores mexicanos fueron contratados como braceros por acuerdos con Estados Unidos, para trabajar temporalmente en el campo y la industria de ese país.",
-      "## Derechos políticos",
-      "En 1953 se reformó la Constitución para que las mujeres pudieran votar en elecciones federales, con el gobierno de Ruiz Cortines. Sin embargo, el sistema político siguió dominado por el PRI, con elecciones poco competitivas.",
-      "## Crecimiento con desigualdad",
-      "El crecimiento acelerado trajo urbanización: millones de personas migraron del campo a las ciudades, sobre todo a la Ciudad de México. Crecieron la clase media y las universidades, pero la pobreza rural, la desigualdad y el cierre de espacios políticos generaron tensiones. Esas tensiones estallaron en 1968.",
-      "## El fin del modelo",
-      "Hacia 1970 el modelo mostró límites: la industria dependía de importaciones, el déficit público y la deuda crecieron, y el campo se rezagó. En la década de 1970 el país enfrentó devaluaciones y una crisis más profunda.",
-      "## Para el examen",
-      "Ideas clave: el crecimiento se basó en la ISI, el Estado intervino en la economía y en la seguridad social, y la estabilidad fue el sello del periodo. Fechas: 1942–1964 (Programa Bracero), 1943 (IMSS), 1953 (voto femenino), 1954 (devaluación), 1959 (libros de texto gratuitos), 1960 (nacionalización eléctrica)."
-    ],
-    game: null,
-    quiz: [
-      {
-        q: "¿Cómo se llama el modelo que consistió en producir en el país los bienes que antes se importaban?",
-        options: ["Industrialización por sustitución de importaciones", "Libre comercio", "Economía de subsistencia", "Socialismo agrario"],
-        answer: 0,
-        explain: "La ISI fue la base del crecimiento del milagro mexicano; el Estado protegía la industria nacional con aranceles y apoyo."
-      },
-      {
-        q: "¿En qué año se creó el Instituto Mexicano del Seguro Social (IMSS)?",
-        options: ["1917", "1943", "1959", "1960"],
-        answer: 1,
-        explain: "El IMSS se creó en 1943 para dar seguridad social a los trabajadores."
-      },
-      {
-        q: "¿A cuántos pesos por dólar se devaluó la moneda en 1954?",
-        options: ["8.65", "12.50", "20.00", "25.00"],
-        answer: 1,
-        explain: "En 1954 el peso pasó de 8.65 a 12.50 por dólar, y el tipo de cambio se mantuvo fijo hasta 1976."
-      },
-      {
-        q: "¿Qué programa permitió que miles de trabajadores mexicanos trabajaran temporalmente en Estados Unidos?",
-        options: ["Programa Bracero", "Plan Marshall", "Operación Cóndor", "Mercado Común"],
-        answer: 0,
-        explain: "El Programa Bracero (1942–1964) fue un acuerdo bilateral para contratar trabajadores temporales."
-      },
-      {
-        q: "¿En qué año se nacionalizó la industria eléctrica?",
-        options: ["1938", "1954", "1960", "1968"],
-        answer: 2,
-        explain: "En 1960 López Mateos nacionalizó la industria eléctrica y la CFE quedó como principal proveedor."
-      },
-      {
-        q: "¿Qué presidente entregó los libros de texto gratuitos en 1959?",
-        options: ["Miguel Alemán", "Adolfo López Mateos", "Gustavo Díaz Ordaz", "Adolfo Ruiz Cortines"],
-        answer: 1,
-        explain: "López Mateos impulsó los libros de texto gratuitos, que se entregaron por primera vez en 1959."
-      },
-      {
-        q: "¿En qué año obtuvieron las mujeres el derecho a votar en elecciones federales?",
-        options: ["1917", "1935", "1953", "1968"],
-        answer: 2,
-        explain: "La reforma de 1953 reconoció el voto femenino en elecciones federales."
-      },
-      {
-        q: "¿Cómo se conoce el periodo de inflación baja y moneda estable entre 1954 y 1970?",
-        options: ["Desarrollo estabilizador", "Apertura democrática", "Economía de guerra", "Shock neoliberal"],
-        answer: 0,
-        explain: "El desarrollo estabilizador se caracterizó por la estabilidad de precios y del tipo de cambio."
-      }
-    ]
-  },
+
   {
     id: 5,
-    title: "1968 y la guerra sucia",
-    period: "1968 – 1982",
+    title: "El milagro mexicano: de Ávila Camacho a López Mateos",
+    period: "1940 – 1964",
     lesson: [
-      "## El detonante",
-      "El 22 de julio de 1968 una riña entre estudiantes de escuelas preparatorias y vocacionales del Instituto Politécnico Nacional, y la policía, derivó en una protesta masiva. Los estudiantes exigían la destitución de jefes policiacos, la derogación del artículo 145 bis del Código Penal (llamado \"delito de disolución social\") y la liberación de presos políticos.",
-      "## Un movimiento amplio",
-      "Durante el verano el movimiento creció. Hubo marchas multitudinarias en la Ciudad de México, la participación de universidades y del Politécnico, y la solidaridad de sectores de maestros, obreros y ciudadanos. El Consejo Nacional de Huelga (CNH) organizó el pliego petitorio y las protestas, en el contexto de la cercanía de los Juegos Olímpicos de México 1968.",
-      "## La ocupación militar",
-      "A finales de julio el ejército ocupó el Zócalo y la Universidad Nacional Autónoma de México (UNAM). En septiembre las tropas entraron a la Ciudad Universitaria y a las instalaciones del Politécnico, lo que causó detenciones y la disolución de asambleas.",
-      "## 2 de octubre de 1968: Tlatelolco",
-      "El 2 de octubre, en la Plaza de las Tres Culturas de Tlatelolco, se realizaba un mitin estudiantil. Tropas del ejército y un grupo especial conocido como Batallón Olimpia dispararon contra la multitud. Hubo muchos muertos y heridos, y cientos de detenidos. El número de víctimas sigue siendo debatido: las cifras oficiales son mucho menores que las estimaciones de testigos, periodistas e investigaciones posteriores, que hablan de cientos de muertos.",
-      "## Después de Tlatelolco",
-      "Los Juegos Olímpicos se inauguraron el 12 de octubre, en medio de la represión. El movimiento estudiantil quedó desarticulado. El presidente Gustavo Díaz Ordaz terminó su mandato en 1970, y lo sucedió Luis Echeverría.",
-      "## La guerra sucia",
-      "Entre los años setenta y principios de los ochenta, el Estado combatió a grupos guerrilleros y a opositores con detenciones ilegales, torturas, ejecuciones y desapariciones forzadas. Participaron corporaciones de seguridad como la Dirección Federal de Seguridad (DFS), además de unidades militares. Esa etapa se conoce como guerra sucia.",
-      "## Guerrillas y represión en Guerrero",
-      "En Guerrero, Lucio Cabañas dirigió el Partido de los Pobres, una guerrilla rural que se enfrentó al Ejército. El 10 de junio de 1971, durante una marcha estudiantil en la Ciudad de México, grupos paramilitares conocidos como Halcones atacaron a los manifestantes; el episodio, llamado \"Halconazo\", dejó decenas de muertos.",
-      "## Memoria y justicia",
-      "En 2001 se creó la Fiscalía Especial para investigar los hechos del pasado, conocida como FEMOSPP, que documentó desapariciones forzadas y abusos. La mayoría de los casos no llegó a sentencia. Para el examen: la Comisión Nacional de Derechos Humanos (CNDH) es de 1990, distinta de la fiscalía de 2001.",
+      "## Contexto internacional",
+      "Tres hechos influyeron en esta etapa: la Segunda Guerra Mundial (1939–1945), la Guerra Fría (1945–1991) y la Revolución cubana (1953–1959).",
+      "Por la Segunda Guerra Mundial, México empezó a fabricar productos que antes compraba al exterior. Entre 1939 y 1945 las exportaciones se duplicaron. La guerra dio al país la oportunidad de producir más y de industrializarse, y se registró el crecimiento económico más importante que jamás había tenido. México y Estados Unidos integraron una comisión para planear la producción de lo que Estados Unidos no podía fabricar por estar en guerra. Se desarrolló la política del buen vecino, una mejor relación entre los países de América mientras durara la guerra.",
+      "En los años cuarenta México era todavía un país predominantemente agrícola, porque el proceso de industrialización fue en bienes de consumo no duradero.",
+      "## Presidencialismo y civilismo",
+      "El sistema político posrevolucionario se caracteriza por ser presidencialista: las decisiones políticas giran en torno al presidente. Desde 1940 hay estabilidad política y social. Las luchas por el poder ya no implican levantamientos armados, sino rupturas dentro del partido gobernante.",
+      "## El milagro mexicano",
+      "Se llama «milagro mexicano» a la etapa de 1940 a 1970 en la que la economía creció de manera importante. Se divide en dos periodos: 1940–1958 y 1958–1970. Sus características fueron el crecimiento y la consolidación del mercado interno, la inserción de México en la economía mundial, empresas poco competitivas, altos índices de inflación y la política de sustitución de importaciones.",
+      "Periodo 1940–1958: la economía creció a más de 6.5 % anual del PIB. Las fábricas de bienes de consumo no duradero (calzado, textiles, alimentos procesados) pasaron de 13 000 en 1940 a 73 000 en 1950. Hubo dos devaluaciones: en 1948, por el ajuste mundial de las monedas tras la guerra, y en 1954, por la recesión de Estados Unidos y la baja de las materias primas que México exportaba. El crecimiento industrial trajo migración del campo a la ciudad, crecimiento de las ciudades (sobre todo la capital), obras de urbanización, unidades habitacionales, vialidades y zonas industriales, y el fortalecimiento de la clase media.",
+      "Periodo 1958–1970: se aplicó el «desarrollo estabilizador», una política de estabilidad de precios y del tipo de cambio, con intervención directa del Estado y subordinación de la agricultura a la industria. Se invirtió en la industria y se descuidó el campo, y desde entonces México dejó de ser autosuficiente en alimentos (hubo que importar maíz). Se instalaron empresas de consumo duradero (línea blanca, automotriz, electrónica) e industria pesada, con exención de impuestos, proteccionismo y subsidios. Se fomentó la entrada de capital extranjero y el capitalismo de Estado, y los gobiernos recurrieron al endeudamiento externo.",
+      "La consecuencia fue una distribución desigual de la riqueza: aumentaron los ingresos de los grupos ricos y bajaron los de los grupos más débiles.",
+      "## Manuel Ávila Camacho (1940–1946)",
+      "Con su gobierno comenzó el México contemporáneo, se consolidó el presidencialismo y se sentaron las bases para que los presidentes ya no fueran militares sino civiles: empezó la «era de los licenciados».",
+      "Política de Unidad Nacional: ante la Segunda Guerra Mundial se pidió dejar de lado los intereses particulares y defender a la nación. Se firmó un pacto obrero-industrial: los trabajadores se comprometían a no pedir aumentos salariales ni hacer huelgas mientras durara la guerra, y los empresarios a no subir precios y dar aumentos cuando fuera posible (al final no cumplieron). El Estado asumió un papel central en la promoción del desarrollo industrial.",
+      "Leyes de apoyo a la industrialización: la Ley de Industrias Nuevas y Necesarias (Regla XIV), que exentaba de impuestos por 5, 10 o 15 años a las empresas nuevas, y la Ley de Mexicanización de la Economía, que exigía al menos 51 % de capital nacional y máximo 49 % de capital extranjero.",
+      "Otros hechos: suprimió el sector militar del PRM; en 1943 se creó el IMSS, junto con el Hospital de Cardiología y el Hospital Infantil; México participó en la guerra con el Escuadrón 201; se modificó el artículo 3 para eliminar la educación socialista; en 1946 se elaboró una Ley Electoral con los requisitos para registrar partidos nacionales. El 18 de enero de 1946 se disolvió el PRM y se creó el Partido Revolucionario Institucional (PRI), pues sus dirigentes consideraron que la Revolución ya estaba institucionalizada. Su primer candidato fue Miguel Alemán Valdés.",
+      "## Miguel Alemán Valdés (1946–1952)",
+      "Fue el primer presidente constitucional civil, abogado egresado de la UNAM. Con él llegó una nueva élite gobernante, formada por políticos y no por los militares de la Revolución. Se caracterizó por apoyar a la iniciativa privada, por su lucha anticomunista, por limitar a los sindicatos de izquierda y por fomentar la inversión extranjera, sobre todo la estadounidense.",
+      "Se frenaron ideales de la Revolución: el reparto de tierras, la participación del Estado en la economía y el respeto a los derechos de los trabajadores. Fueron comunes la corrupción y el enriquecimiento ilícito, porque el grupo gobernante mezcló la política con los negocios. El país comenzó a imitar el modo de vida de Estados Unidos. Se impulsaron las obras públicas y el turismo (Acapulco y la Ciudad Universitaria), y mediante Nacional Financiera se dieron créditos y asistencia técnica a pequeñas y medianas empresas.",
+      "El «charrismo sindical» es una forma de control en la que la dirigencia sindical la impone la empresa o el gobierno, y no la eligen los trabajadores. Viene de la afición a la charrería del dirigente que se impuso a los ferrocarrileros en 1948, Jesús Díaz de León. Fidel Velázquez fue líder de la CTM por unos 60 años. En 1948 Vicente Lombardo Toledano creó el Partido Popular, que en 1960 se convertiría en Partido Popular Socialista (PPS), un partido crítico que consideraba que el PRI había traicionado la Revolución.",
+      "El modelo de Alemán fue el estatista: impulsar la economía con incentivos a la iniciativa privada, pero bajo el control del Estado. La distribución del ingreso se caracterizó por grandes ganancias empresariales y reducción del salario real. Su idea: «Primero crear la riqueza, para después repartirla».",
+      "## Adolfo Ruiz Cortines (1952–1958)",
+      "Continuó la política de Alemán, pero con una política de «moralidad» para devolver la credibilidad a la administración pública, y con austeridad. Se otorgaron facilidades a los capitales extranjeros. Comenzó el «desarrollo estabilizador», con crecimiento de 6 % anual y estabilidad de precios y de tipo de cambio.",
+      "Enfrentó inflación, recesión, desempleo y salarios muy bajos. Para ello aumentó el gasto público, controló la inflación, dio créditos y subsidios y devaluó el peso (1954). Las exportaciones subieron, pero el dinero valía menos y la inflación llegó a 30 %, lo que provocó protestas. El Estado protegió el mercado interno para continuar la sustitución de importaciones y reguló las importaciones con licencias.",
+      "En el campo se alcanzó al inicio la autosuficiencia alimentaria y hubo distritos de riego en el norte y noroeste para exportación; pero los campesinos dependían del Estado, que decidía cultivos, precios y créditos. La industria recibió la mano de obra sobrante del campo, pero no incorporó tecnología y quedó rezagada y poco competitiva, con bienes de consumo caros.",
+      "Hechos políticos: en 1953 se otorgó el voto a la mujer; se creó la CROC; la Ley Electoral de 1954 pidió a un partido al menos 75 mil afiliados repartidos en dos tercios de los estados. Además del PRI destacaban el PAN (principal oposición real), el PPS (que solo criticaba a la Revolución y al imperialismo estadounidense), el PARM (formado por viejos militantes del PRI) y el PCM (siempre en crisis y con poca influencia).",
+      "## Adolfo López Mateos (1958–1964)",
+      "Se consolidó el presidencialismo: el Ejecutivo tuvo un control incuestionable sobre el PRI y una enorme influencia política, económica, social y laboral, y los sindicatos no eran independientes. El PRI repartía candidaturas entre sectores mediante «cuotas de poder».",
+      "Ley Electoral de 1963: estableció los «diputados de partido»: si un partido de oposición obtenía 2.5 % de la votación, tendría 5 diputados, y uno más por cada 0.5 % extra, hasta un máximo de 20. Se buscaba favorecer a los partidos de oposición sin poner en peligro la hegemonía del PRI. Se nacionalizó y expropió la industria eléctrica, y se impulsó la CFE, luego de que las compañías estadounidenses con la concesión se negaron a ampliar el servicio.",
+      "En 1958 comenzaron movimientos laborales: el magisterial, encabezado por Othón Salazar, y el ferrocarrilero, dirigido por Demetrio Vallejo. Pedían aumento salarial, desconocer a las direcciones sindicales oficialistas y un sindicalismo democrático e independiente del Estado. A principios de los años sesenta hubo un movimiento campesino que exigía tierra en Morelos y que terminó con el asesinato de su dirigente, Rubén Jaramillo, excombatiente zapatista (1962). Surgieron movimientos guerrilleros en Guerrero y Oaxaca, encabezados por Lucio Cabañas y Genaro Vázquez Rojas.",
+      "Otros hechos: se creó el ISSSTE, la Comisión Nacional de Libros de Texto Gratuitos y el Museo Nacional de Antropología e Historia. Rompió el aislamiento diplomático de México. Mantuvo el control de las organizaciones campesinas y obreras, y reprimió movimientos sociales.",
       "## Para el examen",
-      "Ideas clave: el 68 fue un movimiento por libertades democráticas y contra el autoritarismo; Tlatelolco es el momento de mayor represión; la guerra sucia fue una política de Estado de detenciones y desapariciones. Fechas: 22 de julio de 1968 (inicio), 2 de octubre de 1968 (Tlatelolco), 12 de octubre (Juegos Olímpicos), 10 de junio de 1971 (Halconazo), 2001 (FEMOSPP)."
+      "Ideas clave: el milagro mexicano (1940–1970) tuvo dos etapas, con sustitución de importaciones y desarrollo estabilizador; sus costos fueron el abandono del campo, la deuda y la desigualdad; Ávila Camacho creó el IMSS, firmó el pacto obrero-industrial y el PRM pasó a PRI en 1946; Alemán fue el primer presidente civil y se asocia con corrupción y charrismo sindical; Ruiz Cortines dio el voto a la mujer (1953); López Mateos nacionalizó la industria eléctrica, creó el ISSSTE y los libros de texto gratuitos, y enfrentó a ferrocarrileros y maestros."
     ],
-    game: null,
     quiz: [
       {
-        q: "¿Qué día comenzó el movimiento estudiantil de 1968 tras la riña con la policía?",
-        options: ["22 de julio", "2 de octubre", "12 de octubre", "18 de septiembre"],
-        answer: 0,
-        explain: "El movimiento empezó el 22 de julio de 1968, tras la riña entre estudiantes y la policía."
-      },
-      {
-        q: "¿En qué plaza ocurrió la masacre del 2 de octubre de 1968?",
-        options: ["Zócalo", "Tlatelolco", "Garibaldi", "Bellas Artes"],
+        q: "¿Cuál fue uno de los efectos de la Segunda Guerra Mundial en México?",
+        options: ["Las exportaciones se redujeron a la mitad", "México empezó a producir lo que antes compraba al exterior y las exportaciones se duplicaron", "Se suspendió la industrialización", "México perdió su mercado interno"],
         answer: 1,
-        explain: "La represión ocurrió en la Plaza de las Tres Culturas, en Tlatelolco."
+        explain: "La guerra dio la oportunidad de aumentar la producción y de industrializarse."
       },
       {
-        q: "¿Qué gran evento internacional se realizó en México en octubre de 1968?",
-        options: ["Mundial de fútbol", "Juegos Olímpicos", "Copa América", "Juegos Panamericanos"],
+        q: "¿Qué políticas económicas caracterizaron el «milagro mexicano»?",
+        options: ["Libre mercado total y venta de empresas estatales", "Sustitución de importaciones y desarrollo estabilizador", "Reparto agrario masivo", "Nacionalización de la banca"],
         answer: 1,
-        explain: "Los Juegos Olímpicos se inauguraron el 12 de octubre de 1968, en medio de la represión."
+        explain: "El milagro se divide en 1940–1958 y 1958–1970."
       },
       {
-        q: "¿Qué presidente gobernaba cuando ocurrieron los hechos de 1968?",
-        options: ["Gustavo Díaz Ordaz", "Luis Echeverría", "Adolfo López Mateos", "Miguel Alemán"],
-        answer: 0,
-        explain: "Díaz Ordaz gobernó de 1964 a 1970. Echeverría lo sucedió en 1970."
-      },
-      {
-        q: "¿Cómo se llamaba el grupo especial que actuó en Tlatelolco?",
-        options: ["Batallón Olimpia", "Guardia Nacional", "Halcones", "Rurales"],
-        answer: 0,
-        explain: "El Batallón Olimpia fue un grupo especial que participó en la represión del 2 de octubre. Los Halcones actuaron en 1971."
-      },
-      {
-        q: "¿Qué guerrillero guerrerense dirigió el Partido de los Pobres?",
-        options: ["Lucio Cabañas", "Emiliano Zapata", "Genaro Vázquez", "Ricardo Flores Magón"],
-        answer: 0,
-        explain: "Lucio Cabañas dirigió el Partido de los Pobres en la sierra de Guerrero durante los años setenta."
-      },
-      {
-        q: "¿Qué dependencia de seguridad estuvo vinculada a la represión y la guerra sucia?",
-        options: ["Dirección Federal de Seguridad (DFS)", "Secretaría de Educación Pública", "Comisión Nacional de Derechos Humanos", "Instituto Federal Electoral"],
-        answer: 0,
-        explain: "La DFS fue el principal órgano de inteligencia y seguridad involucrado en la guerra sucia."
-      },
-      {
-        q: "¿En qué año se creó la Fiscalía Especial (FEMOSPP) para investigar los crímenes del pasado?",
-        options: ["1990", "2001", "1968", "2012"],
+        q: "¿Qué consecuencia tuvo el desarrollo estabilizador para el campo y la alimentación?",
+        options: ["México se volvió exportador de alimentos", "Se descuidó el campo y México dejó de ser autosuficiente en alimentos", "Se repartió más tierra", "Se eliminaron los ejidos"],
         answer: 1,
-        explain: "La FEMOSPP se creó en 2001. La CNDH, en cambio, se creó en 1990."
+        explain: "Se invirtió en la industria y hubo que comprar maíz al exterior. Además creció la desigualdad."
+      },
+      {
+        q: "¿Qué se comprometían a hacer los trabajadores en el pacto obrero-industrial de Ávila Camacho?",
+        options: ["No pedir aumentos salariales ni hacer huelgas durante la guerra", "Aceptar el 51 % de capital extranjero", "Dejar sus sindicatos", "Pagar más impuestos"],
+        answer: 0,
+        explain: "Los empresarios prometieron no subir precios, pero al final no cumplieron."
+      },
+      {
+        q: "¿Qué ocurrió en 1946?",
+        options: ["Se creó el IMSS", "Se disolvió el PRM y se creó el PRI", "Se dio el voto a la mujer", "Se nacionalizó la industria eléctrica"],
+        answer: 1,
+        explain: "El primer candidato del PRI fue Miguel Alemán Valdés, el primer presidente civil."
+      },
+      {
+        q: "¿Qué es el «charrismo sindical»?",
+        options: ["Una huelga de charros", "Un sindicato independiente", "Un control en el que la dirigencia sindical es impuesta por la empresa o el gobierno", "Un partido de oposición"],
+        answer: 2,
+        explain: "El término viene de la afición a la charrería de Jesús Díaz de León, impuesto a los ferrocarrileros en 1948."
+      },
+      {
+        q: "¿Qué ocurrió en 1953 durante el gobierno de Ruiz Cortines?",
+        options: ["Se creó el ISSSTE", "Se reconoció el voto de la mujer", "Se nacionalizó la industria eléctrica", "Se fundó el PAN"],
+        answer: 1,
+        explain: "También se creó la CROC y la Ley Electoral de 1954 endureció los requisitos para registrar partidos."
+      },
+      {
+        q: "¿Qué estableció la Ley Electoral de 1963, de López Mateos?",
+        options: ["El voto a los 18 años", "Los diputados de partido: con 2.5 % de la votación, un partido de oposición tenía 5 diputados", "La desaparición del PRI", "La reelección presidencial"],
+        answer: 1,
+        explain: "Por cada 0.5 % extra se sumaba un diputado, hasta un máximo de 20, sin poner en riesgo la hegemonía del PRI."
       }
     ]
   },
+
   {
     id: 6,
-    title: "Crisis y reformas",
-    period: "1982 – 2000",
+    title: "Díaz Ordaz, el 68 y la crisis del modelo",
+    period: "1964 – 1982",
     lesson: [
-      "## La crisis de 1982",
-      "A principios de los ochenta cayeron los precios del petróleo, aumentó la deuda externa y subieron las tasas de interés. En agosto de 1982 México anunció que no podía pagar su deuda, lo que se conoce como moratoria. El 1 de septiembre de 1982 el presidente José López Portillo nacionalizó la banca. La crisis marcó el fin del modelo de desarrollo basado en el Estado y la deuda.",
-      "## Austeridad y el gobierno de De la Madrid",
-      "Miguel de la Madrid (1982–1988) aplicó programas de ajuste: recorte del gasto público, venta de empresas estatales y reducción de subsidios. México entró al GATT en 1986, iniciando la apertura comercial. El sismo del 19 de septiembre de 1985 en la Ciudad de México dejó miles de muertos y mostró el debilitamiento de las instituciones y la fuerza de la solidaridad ciudadana.",
-      "## 1988: la elección cuestionada",
-      "En la elección presidencial de 1988 Carlos Salinas de Gortari, del PRI, fue declarado ganador en medio de denuncias de fraude. Cuauhtémoc Cárdenas, candidato del Frente Democrático Nacional, obtuvo votos significativos. El conteo se interrumpió por una caída del sistema de cómputo, lo que alimentó las sospechas.",
-      "## Salinas: privatización y libre comercio",
-      "Salinas (1988–1994) privatizó empresas como Teléfonos de México (Telmex) en 1990. En 1992 reformó el artículo 27 constitucional para permitir la venta de tierras ejidales, lo que puso fin al reparto agrario. Firmó el Tratado de Libre Comercio de América del Norte (TLCAN), que entró en vigor el 1 de enero de 1994. Creó el programa Solidaridad para combatir la pobreza.",
-      "## 1994: un año de crisis",
-      "El 1 de enero de 1994 el Ejército Zapatista de Liberación Nacional (EZLN) se levantó en armas en Chiapas, el mismo día que entró en vigor el TLCAN. En marzo fue asesinado Luis Donaldo Colosio, candidato presidencial del PRI. En diciembre, bajo el gobierno de Ernesto Zedillo, el peso se devaluó, lo que se conoce como el \"error de diciembre\" y desató una crisis económica.",
-      "## El rescate financiero",
-      "En 1995 el gobierno recibió un apoyo financiero de Estados Unidos y del Fondo Monetario Internacional (FMI) para estabilizar la economía. La crisis provocó quiebras, aumento del desempleo y de la deuda de las familias.",
-      "## Reforma electoral",
-      "El Instituto Federal Electoral (IFE) se creó en 1990 para organizar las elecciones. En 1996 se reformó la ley para dar autonomía al IFE, lo que fortaleció la confianza en el proceso electoral.",
-      "## 1997: el cambio",
-      "En las elecciones intermedias de 1997 el PRI perdió por primera vez la mayoría en la Cámara de Diputados. Ese mismo año Cuauhtémoc Cárdenas ganó la jefatura de gobierno del Distrito Federal, el primer cargo de elección directa en la capital.",
+      "## El gobierno de Gustavo Díaz Ordaz (1964–1970)",
+      "Su gobierno fue autoritario y represivo y marcó el fin de la etapa de crecimiento. Continuaron el presidencialismo, el dominio del PRI y el pluripartidismo aparente, que disimulaba un sistema de partido oficial. El modelo del desarrollo estabilizador llegaba a su límite y generó descontento. Destacan el movimiento de los médicos (1964–1965) y el movimiento estudiantil de 1968. Los movimientos sociales eran enfrentados con represión.",
+      "Obras y hechos del sexenio: se inauguró la primera línea del Metro (Sistema de Transporte Colectivo); se construyeron el Estadio Azteca y el Palacio de los Deportes; el país fue sede del Mundial de Futbol de 1970; se creó el pago de la tenencia vehicular para subsidiar los Juegos Olímpicos; se impulsaron la petroquímica y la industria automotriz con inversión extranjera; continuó la política proteccionista, con subsidios, exención de impuestos y aranceles. Se firmó el Tratado de Tlatelolco, por el que los países de América Latina se comprometían a no fabricar, poseer ni usar armas nucleares.",
+      "## Los Juegos Olímpicos de 1968",
+      "La Ciudad de México fue sede de los XIX Juegos Olímpicos, llamados «de la paz». El gobierno pensaba mostrar los logros del Estado mexicano. Pero los Juegos se realizaron entre el repudio popular, porque el movimiento estudiantil fue minimizado y reprimido brutalmente por el gobierno.",
+      "## El movimiento estudiantil de 1968",
+      "El movimiento coincidió con el agotamiento del desarrollo estabilizador y con el estancamiento de la economía, y respondió también a la política autoritaria de Díaz Ordaz. Participaron sobre todo universitarios y politécnicos, profesores e intelectuales. Fue un movimiento político: exigía mayor participación y democratización de la vida política.",
+      "Los estudiantes se organizaron en el Consejo Nacional de Huelga (CNH). Su pliego petitorio tenía seis puntos: libertad a todos los presos políticos; derogación de los artículos 145 y 145 bis del Código Penal Federal; desaparición del Cuerpo de Granaderos; destitución de los jefes de policía; indemnización a los familiares de los heridos y muertos desde el inicio del conflicto; y deslinde de responsabilidades de los funcionarios culpables de los hechos sangrientos.",
+      "Causas hipotéticas que se mencionan: conflictos internos del gobierno por la cercanía de la sucesión presidencial; el movimiento daba motivos para encarcelar a los disidentes y asegurar unos Juegos Olímpicos en paz; y el gobierno quería frenar una supuesta «conspiración comunista» para boicotear las Olimpiadas, detectada por el FBI y la CIA.",
+      "La represión alcanzó su momento más grave el 2 de octubre de 1968 en la Plaza de las Tres Culturas, en Tlatelolco (dato complementario: la presentación del maestro no da la fecha). Después de las protestas se puso en entredicho el modelo económico adoptado al terminar la Segunda Guerra Mundial, que había acentuado la desigualdad, no había creado los empleos necesarios para el crecimiento de la población y había reafirmado los lazos de dependencia extranjera.",
+      "## La crisis del desarrollo estabilizador",
+      "El modelo comenzó a decaer a principios de los años setenta. Requería cada vez más recursos, pero no podían recaudarse porque los empresarios vivían en una especie de «paraíso fiscal». Los primeros costos se vieron en la crisis de 1976, pero el descubrimiento de yacimientos petroleros la suavizó; ante eso, el gobierno no hizo las reformas que el país necesitaba.",
+      "## Luis Echeverría (1970–1976)",
+      "Como producto de una crisis internacional, las economías de Estados Unidos, Inglaterra, Japón y Alemania dejaron de invertir en los sectores automotriz, de construcción, textil y de electrodomésticos, lo que generó mucho desempleo en México. Echeverría aplicó el modelo de «desarrollo compartido», que buscaba corregir los errores del desarrollo estabilizador: desarrollar el capitalismo agrario con créditos para los campesinos y modernizar los métodos de cultivo.",
+      "Aunque su objetivo era un desarrollo más equitativo, tuvo críticas y problemas: persistió la inflación, aumentó la deuda externa y la aplicación de las políticas públicas fue poco eficaz.",
+      "## José López Portillo (1976–1982)",
+      "Cuando asumió la presidencia el país vivía una grave crisis económica, con una gran fuga de capitales. La deuda pública pasó de 20 000 a 80 000 millones de dólares. Se encontraron nuevos yacimientos petroleros en el sureste, y el petróleo ayudó a suavizar la crisis, pues sirvió como aval para préstamos internacionales. Se invirtió en infraestructura (carreteras, presas, plantas de energía y electrificación rural) y se mantuvo una política exterior activa.",
+      "Pero en 1981 se encontraron otros yacimientos en el mundo, los países árabes volvieron a ser los principales vendedores y el precio del barril bajó. La banca extranjera suspendió sus préstamos a México y se acabó la reserva de dólares. López Portillo decidió expropiar los bancos privados como medida de emergencia (1 de septiembre de 1982), y eso causó más fuga de capitales. Fue el inicio de la llamada «década perdida» de los años ochenta, con aumento de la deuda externa, la inflación y el desempleo.",
       "## Para el examen",
-      "Ideas clave: la crisis de 1982 llevó al cambio de modelo económico (de la intervención del Estado a la apertura y la privatización); el TLCAN y la reforma al artículo 27 marcaron la nueva etapa; las reformas electorales abrieron el camino a la alternancia. Fechas: 1982 (moratoria y nacionalización bancaria), 1985 (sismo), 1988 (elección cuestionada), 1992 (reforma al artículo 27), 1994 (TLCAN, EZLN, error de diciembre), 1996 (IFE autónomo), 1997 (el PRI pierde la mayoría)."
+      "Ideas clave: Díaz Ordaz fue autoritario; en su sexenio hubo Metro, Estadio Azteca, Juegos Olímpicos (1968) y Mundial (1970); el movimiento estudiantil del 68 exigía democratización, lo organizó el CNH y tenía un pliego de seis puntos; la represión puso en duda el modelo económico; Echeverría aplicó el «desarrollo compartido»; López Portillo usó el petróleo como garantía de préstamos, vio caer el precio y expropió la banca; la deuda pasó de 20 000 a 80 000 millones de dólares."
     ],
-    game: null,
     quiz: [
       {
-        q: "¿En qué año se nacionalizó la banca en México?",
-        options: ["1968", "1982", "1988", "1994"],
-        answer: 1,
-        explain: "El 1 de septiembre de 1982 López Portillo nacionalizó la banca, en medio de la crisis de la deuda."
-      },
-      {
-        q: "¿Qué presidente nacionalizó la banca en 1982?",
-        options: ["Gustavo Díaz Ordaz", "José López Portillo", "Miguel de la Madrid", "Carlos Salinas de Gortari"],
-        answer: 1,
-        explain: "López Portillo nacionalizó la banca; De la Madrid aplicó después programas de ajuste."
-      },
-      {
-        q: "¿Quién fue el candidato del Frente Democrático Nacional en la elección de 1988?",
-        options: ["Cuauhtémoc Cárdenas", "Luis Donaldo Colosio", "Ernesto Zedillo", "Francisco I. Madero"],
+        q: "¿Qué caracterizó al gobierno de Díaz Ordaz?",
+        options: ["Fue autoritario y represivo, y marcó el fin de la etapa de crecimiento", "Fue el más democrático del siglo", "Nacionalizó la banca", "Aplicó el modelo neoliberal"],
         answer: 0,
-        explain: "Cuauhtémoc Cárdenas fue el candidato del FDN; la elección de 1988 se cuestionó por fraude."
+        explain: "El desarrollo estabilizador llegaba a su límite y generó descontento."
       },
       {
-        q: "¿Qué reforma constitucional de 1992 permitió vender tierras ejidales?",
-        options: ["Artículo 3", "Artículo 27", "Artículo 123", "Artículo 130"],
+        q: "¿Cuál de estas obras corresponde al sexenio de Díaz Ordaz?",
+        options: ["La creación del IMSS", "El Palacio de los Deportes y la primera línea del Metro", "El ISSSTE", "La Ciudad Universitaria"],
         answer: 1,
-        explain: "La reforma al artículo 27 de 1992 permitió privatizar las tierras ejidales y puso fin al reparto agrario."
+        explain: "También se construyó el Estadio Azteca y se creó el pago de la tenencia para subsidiar las Olimpiadas."
       },
       {
-        q: "¿Cuándo entró en vigor el TLCAN?",
-        options: ["1 de enero de 1992", "1 de enero de 1994", "1 de enero de 1997", "1 de enero de 2000"],
+        q: "¿Qué organismo encabezó al movimiento estudiantil de 1968?",
+        options: ["El PRI", "El Consejo Nacional de Huelga (CNH)", "El Partido Popular", "La CTM"],
         answer: 1,
-        explain: "El TLCAN entró en vigor el 1 de enero de 1994, el mismo día del levantamiento zapatista."
+        explain: "Participaron sobre todo universitarios y politécnicos, profesores e intelectuales."
       },
       {
-        q: "¿Qué grupo se levantó en armas en Chiapas el 1 de enero de 1994?",
-        options: ["EZLN", "PRD", "PAN", "CNTE"],
+        q: "¿Cuál NO era una demanda del pliego petitorio de 1968?",
+        options: ["Libertad a los presos políticos", "Desaparición del Cuerpo de Granaderos", "Destitución de los jefes de policía", "Nacionalización del petróleo"],
+        answer: 3,
+        explain: "El pliego tenía seis puntos, incluida la derogación de los artículos 145 y 145 bis del Código Penal."
+      },
+      {
+        q: "¿Qué tratado firmó México en el sexenio de Díaz Ordaz para prohibir armas nucleares en América Latina?",
+        options: ["TLCAN", "Tratado de Tlatelolco", "Tratado de Guadalupe Hidalgo", "Tratado de Ciudad Juárez"],
+        answer: 1,
+        explain: "Los países de América Latina se comprometían a no fabricar, poseer ni utilizar armas nucleares."
+      },
+      {
+        q: "¿Cuál fue el modelo económico de Luis Echeverría?",
+        options: ["Desarrollo compartido", "Libre mercado", "Mexicanización de la economía", "Neoliberalismo"],
         answer: 0,
-        explain: "El Ejército Zapatista de Liberación Nacional (EZLN) se levantó en Chiapas en 1994."
+        explain: "Buscó corregir los errores del desarrollo estabilizador, pero persistieron la inflación y la deuda."
       },
       {
-        q: "¿Cómo se conoce la devaluación de diciembre de 1994?",
-        options: ["Error de diciembre", "Milagro mexicano", "Crack del 29", "Apagón analógico"],
-        answer: 0,
-        explain: "El \"error de diciembre\" de 1994 fue una devaluación que desató una crisis financiera."
+        q: "¿Cómo ayudó el petróleo a López Portillo?",
+        options: ["Eliminó la deuda externa", "Sirvió de aval para préstamos internacionales y suavizó la crisis", "Hizo que México dejara de importar alimentos", "Permitió bajar los impuestos"],
+        answer: 1,
+        explain: "Se hallaron nuevos yacimientos en el sureste, pero en 1981 el precio del barril bajó."
       },
       {
-        q: "¿En qué año el PRI perdió por primera vez la mayoría en la Cámara de Diputados?",
-        options: ["1988", "1994", "1997", "2000"],
+        q: "¿Qué medida de emergencia tomó López Portillo en 1982?",
+        options: ["Privatizó Pemex", "Firmó el TLC", "Expropió los bancos privados", "Creó el IMSS"],
         answer: 2,
-        explain: "En 1997 el PRI perdió la mayoría en la Cámara de Diputados, en la elección intermedia."
+        explain: "La banca extranjera había suspendido sus préstamos y se había acabado la reserva de dólares. La expropiación provocó más fuga de capitales."
       }
     ]
   },
+
   {
     id: 7,
-    title: "Transición democrática",
-    period: "2000 – 2012",
+    title: "Los gobiernos neoliberales I: De la Madrid y Salinas",
+    period: "1982 – 1994",
     lesson: [
-      "## El fin de 71 años de PRI",
-      "En las elecciones presidenciales del 2 de julio de 2000, Vicente Fox, candidato de la Alianza por el Cambio (PAN y Partido Verde), derrotó a Francisco Labastida del PRI. Era la primera vez en 71 años que el PRI perdía la presidencia. La alternancia fue pacífica y reconocida por el propio gobierno saliente. Este hecho se considera el inicio formal de la transición democrática.",
-      "## Instituciones y transparencia",
-      "Durante estos años se fortalecieron las instituciones electorales, como el Instituto Federal Electoral (IFE) y el Tribunal Electoral del Poder Judicial de la Federación. En 2002 se publicó la Ley Federal de Transparencia y Acceso a la Información Pública Gubernamental, que dio a los ciudadanos derecho a consultar información del gobierno y creó un órgano para garantizarlo.",
-      "## Fox: avances y límites",
-      "Fox promovió la transparencia y la estabilidad económica, pero no logró impulsar una reforma fiscal ni una reforma energética, porque el Congreso estaba dividido y el PRI conservaba fuerza. Su gobierno mostró que la alternancia no basta por sí sola: hace falta acuerdo político para reformar.",
-      "## La elección de 2006",
-      "En la elección presidencial de 2006 Felipe Calderón, del PAN, ganó por una diferencia mínima frente a Andrés Manuel López Obrador, de la coalición encabezada por el PRD. El resultado fue impugnado: López Obrador denunció irregularidades y se mantuvo un plantón en la Avenida Reforma durante meses. El IFE validó el resultado, y el Tribunal Electoral confirmó la elección.",
-      "## La guerra contra el narcotráfico",
-      "Al inicio de su gobierno, Calderón desplegó al Ejército y a la Marina contra los cárteles de la droga. La estrategia aumentó la violencia en varias regiones del país, con decenas de miles de muertes durante el sexenio y numerosas denuncias de violaciones a derechos humanos.",
-      "## Reforma electoral de 2007-2008",
-      "En 2007 y 2008 se reformó el sistema electoral. Se redujeron los tiempos de campaña, se limitó el gasto de los partidos y se prohibió que terceros compraran propaganda en radio y televisión. El objetivo fue reducir la influencia del dinero y de los medios en las elecciones.",
-      "## Alternancias locales",
-      "Durante estos años hubo alternancias en gubernaturas y ayuntamientos. Partidos distintos al PRI ganaron estados que antes eran de ese partido, lo que mostró que la competencia se extendió a todo el país. Sin embargo, el PRI recuperó la presidencia en 2012 con Enrique Peña Nieto.",
+      "## Origen del neoliberalismo y contexto internacional",
+      "En los años setenta hubo una crisis en los países capitalistas. Para combatirla, Margaret Thatcher (Inglaterra) y Ronald Reagan (Estados Unidos) aplicaron una política económica conocida como modelo neoliberal, desarrollada por el economista Milton Friedman.",
+      "En el plano internacional, el Muro de Berlín cayó en 1989 y la Guerra Fría entre Estados Unidos y la URSS terminó en 1991. El bloque socialista perdió su peso económico. La mayoría de los gobiernos del mundo adoptó el modelo neoliberal, respaldado por organismos como el Fondo Monetario Internacional y el Banco Mundial.",
+      "## Características del neoliberalismo",
+      "Frenar la intervención del Estado en la economía, de modo que el Estado se deshaga de las empresas que controla y las venda a la iniciativa privada. Dejar que el mercado se regule solo, por la ley de la oferta y la demanda. Romper las barreras proteccionistas de las economías nacionales. Abrir el país a la inversión y a los productos extranjeros.",
+      "En México el modelo neoliberal inició con Miguel de la Madrid, se consolidó con Salinas de Gortari y lo retomaron los gobiernos panistas de Fox y Calderón. México empezó a vender sus empresas estatales y fue eliminando el proteccionismo para abrirse al comercio internacional.",
+      "## La ideología neoliberal",
+      "La ideología neoliberal transforma al ser humano en «capital humano». Valores como la competitividad, la producción y el éxito se vuelven preponderantes. El emprendurismo, el coaching y la división entre ganadores y perdedores forman parte de esta ideología. La educación se transforma: se busca vincularla con las empresas y fomentar una cultura del trabajo. El filósofo Byung-Chul Han lo resume así: «Ahora uno se explota a sí mismo y cree que está realizándose».",
+      "## Miguel de la Madrid (1982–1988)",
+      "Elaboró una nueva Ley de Inversiones Extranjeras para facilitar la inversión y recortó el gasto del gobierno en bienestar social. Buscó «modernizar» la educación para vincularla con las necesidades del sector productivo. Ascendió un nuevo grupo de poder: los tecnócratas, jóvenes economistas formados en universidades estadounidenses e inglesas, convencidos de que el crecimiento se logra vinculando la economía con el mercado mundial.",
+      "El gobierno se concentró en privatizar empresas del Estado y en reducir el número de burócratas: se liquidaron o vendieron cerca de 500 empresas estatales, entre ellas Fundidora Monterrey y Uranios Mexicanos. Se contrataron préstamos con altas tasas de interés y nueva deuda para pagar deudas a punto de vencer.",
+      "De la Madrid modificó los términos de la nacionalización de la banca de López Portillo: las empresas recuperaron 34 % de la banca. Para enfrentar la crisis subieron los precios de la luz, el agua, la gasolina y otros servicios del Estado. Bajaron el nivel de vida y el salario de amplios sectores, los precios subieron y la economía se estancó («crecimiento cero»).",
+      "## Las elecciones de 1988 y el fraude electoral",
+      "Un grupo de priistas, encabezado por Cuauhtémoc Cárdenas y Porfirio Muñoz Ledo, quiso defender el proyecto de nacionalismo revolucionario y oponerse a las medidas neoliberales. Al no lograrlo, rompieron con el partido y participaron en las elecciones: Cárdenas fue candidato del Frente Democrático Nacional (FDN). Manuel Clouthier fue candidato del PAN y Carlos Salinas de Gortari, del PRI.",
+      "Salinas ganó por una diferencia estrecha sobre Cárdenas luego de la «caída del sistema» de cómputo de los resultados. En 1989 surgió el Partido de la Revolución Democrática (PRD), integrado por antiguos militantes del PRI.",
+      "## Carlos Salinas de Gortari (1988–1994)",
+      "En 1990 se privatizó el 100 % de la banca. Se privatizaron cerca de 300 empresas de gran valor y de importancia estratégica: Teléfonos de México, Fertilizantes Mexicanos, Altos Hornos de México, Aeroméxico, Mexicana de Aviación, empresas mineras, los canales 7 y 13, entre muchas otras. El gobierno obtuvo mucho dinero, pero no se aplicó en beneficio de todos los mexicanos. Pemex siguió siendo propiedad del Estado, pero se abrió el área de exploración al capital privado.",
+      "Salinas ofreció destinar recursos al Programa Nacional de Solidaridad (Pronasol), creado en 1988 para elevar el nivel de vida de los grupos más pobres. Pretendía aliviar los efectos de la pobreza, pero no atacaba sus causas, y se volvió un programa electorero, porque los beneficiados se comprometían a votar por el PRI.",
+      "El Tratado de Libre Comercio (TLC) entre México, Estados Unidos y Canadá entró en vigor el 1 de enero de 1994. Significó entrar de lleno a la globalización. Con el TLC entran mercancías e inversiones conforme a los intereses de los inversionistas extranjeros; México ofrecía mano de obra barata y riqueza de recursos naturales.",
+      "El proceso privatizador favoreció la aparición de una poderosa oligarquía financiera: la riqueza se concentró en pocas manos y la clase empresarial adquirió tanto poder que influyó en las decisiones políticas. El PAN empezó a colaborar con las políticas de Salinas. Carlos Slim fue declarado el hombre más rico del mundo en 2007.",
+      "## Cambios en la Constitución",
+      "Las reformas del Estado comenzaron con Salinas. Artículo 27: la propiedad ejidal se convierte en propiedad privada, y ahora los ejidos se pueden vender. Artículo 28: las actividades económicas ya no son exclusivas del Estado. Se reconoció a la Iglesia el derecho de poseer bienes y se establecieron relaciones con el Vaticano.",
+      "## El final del sexenio: 1994",
+      "Debido a la inflación acumulada durante varios años se decidió «quitarle los ceros al peso». Al terminar el gobierno de Salinas, en 1994, la situación era muy grave: había un clima de violencia. Surgió el Ejército Zapatista de Liberación Nacional (EZLN) con su levantamiento de 1994, hubo desempleo, muchas empresas cerraron y muchísimos trabajadores fueron despedidos.",
       "## Para el examen",
-      "Ideas clave: la transición se dio por alternancia en las urnas, por instituciones electorales más fuertes y por la transparencia; la falta de reformas de fondo y la violencia del narcotráfico marcaron el periodo. Fechas: 2 de julio de 2000 (triunfo de Fox), 2002 (ley de transparencia), 2006 (elección disputada y guerra contra el narcotráfico), 2007-2008 (reforma electoral), 2012 (regreso del PRI)."
+      "Ideas clave: el neoliberalismo viene de Thatcher, Reagan y Friedman; sus rasgos son menos Estado, mercado libre, fin del proteccionismo y apertura; en México empezó con De la Madrid (privatizó unas 500 empresas), se consolidó con Salinas (banca, Telmex, TLC) y los panistas lo continuaron; en 1988 Cárdenas fue candidato del FDN y se habló de fraude por la «caída del sistema»; de ahí nació el PRD (1989); Salinas reformó los artículos 27 y 28; el TLC entró en vigor el 1 de enero de 1994, y ese año surgió el EZLN."
     ],
-    game: null,
     quiz: [
       {
-        q: "¿En qué año ganó Vicente Fox la presidencia?",
-        options: ["1994", "2000", "2006", "2012"],
+        q: "¿Quiénes aplicaron primero el modelo neoliberal, desarrollado por Milton Friedman?",
+        options: ["Gorbachov y Brézhnev", "Margaret Thatcher y Ronald Reagan", "Lázaro Cárdenas y Roosevelt", "Mao y Castro"],
         answer: 1,
-        explain: "Fox ganó el 2 de julio de 2000, la primera alternancia presidencial en 71 años."
+        explain: "Lo aplicaron para combatir la crisis de los años setenta en los países capitalistas."
       },
       {
-        q: "¿Qué partido gobernó México durante 71 años antes de la elección de 2000?",
-        options: ["PAN", "PRD", "PRI", "Partido Verde"],
+        q: "¿Cuál NO es una característica del neoliberalismo?",
+        options: ["Vender empresas estatales a particulares", "Dejar que el mercado se regule por oferta y demanda", "Aumentar el proteccionismo y la participación del Estado", "Abrir el país a la inversión extranjera"],
         answer: 2,
-        explain: "El PRI gobernó el país desde 1929 hasta 2000, cuando perdió la presidencia frente a Fox."
+        explain: "El neoliberalismo busca romper las barreras proteccionistas y frenar la intervención del Estado."
       },
       {
-        q: "¿Qué presidente declaró la guerra contra el narcotráfico al inicio de su gobierno?",
-        options: ["Felipe Calderón", "Vicente Fox", "Enrique Peña Nieto", "Ernesto Zedillo"],
-        answer: 0,
-        explain: "Calderón desplegó al Ejército contra los cárteles desde 2006, lo que marcó la estrategia de seguridad del sexenio."
-      },
-      {
-        q: "¿Quién fue el candidato de la izquierda que quedó en segundo lugar en 2006?",
-        options: ["Francisco I. Madero", "Andrés Manuel López Obrador", "Cuauhtémoc Cárdenas", "Luis Donaldo Colosio"],
+        q: "¿Quiénes son los «tecnócratas» que ascendieron con De la Madrid?",
+        options: ["Líderes sindicales", "Jóvenes economistas formados en universidades estadounidenses e inglesas", "Militares retirados", "Maestros rurales"],
         answer: 1,
-        explain: "López Obrador fue el candidato de la coalición encabezada por el PRD y denunció la elección de 2006."
+        explain: "Están convencidos de que el crecimiento se logra vinculando la economía con el mercado mundial."
       },
       {
-        q: "¿Qué ley de 2002 buscó garantizar el acceso a la información pública?",
-        options: ["Ley Federal de Transparencia y Acceso a la Información Pública", "Ley Electoral de 1990", "Ley de Amparo", "Ley Lerdo"],
-        answer: 0,
-        explain: "La ley de transparencia de 2002 reconoció el derecho de los ciudadanos a consultar información del gobierno."
+        q: "¿Cuántas empresas estatales se vendieron o liquidaron en el gobierno de De la Madrid?",
+        options: ["Cerca de 50", "Cerca de 500", "Cerca de 3 000", "Ninguna"],
+        answer: 1,
+        explain: "Entre ellas, Fundidora Monterrey y Uranios Mexicanos."
       },
       {
-        q: "¿Qué institución organizó las elecciones de 2006?",
-        options: ["IFE", "INE", "CNDH", "IFAI"],
-        answer: 0,
-        explain: "El IFE organizó las elecciones de 2006. El INE lo sustituyó en 2014."
+        q: "¿Quién fue candidato del Frente Democrático Nacional (FDN) en 1988?",
+        options: ["Manuel Clouthier", "Carlos Salinas de Gortari", "Cuauhtémoc Cárdenas", "Francisco Labastida"],
+        answer: 2,
+        explain: "Cárdenas rompió con el PRI junto con Porfirio Muñoz Ledo. La elección estuvo marcada por la «caída del sistema»."
       },
       {
-        q: "¿En qué fecha se celebró la elección presidencial que ganó Fox?",
-        options: ["2 de julio de 2000", "1 de julio de 2000", "5 de julio de 2000", "18 de julio de 2000"],
-        answer: 0,
-        explain: "La elección presidencial de 2000 se celebró el 2 de julio."
+        q: "¿Qué partido surgió en 1989 con antiguos militantes del PRI?",
+        options: ["PAN", "PPS", "PRD", "PARM"],
+        answer: 2,
+        explain: "El Partido de la Revolución Democrática nació tras la elección de 1988."
       },
       {
-        q: "¿Qué medida de la reforma electoral de 2007-2008 prohibió a terceros comprar propaganda en radio y televisión?",
-        options: [
-          "Prohibir la compra de propaganda por terceros en radio y televisión",
-          "Legalizar la reelección presidencial",
-          "Eliminar el voto secreto",
-          "Privatizar Pemex"
-        ],
+        q: "¿Qué cambios hizo Salinas a los artículos 27 y 28 de la Constitución?",
+        options: ["Prohibió a la Iglesia tener propiedades", "Permitió vender los ejidos y dejó de reservar actividades económicas exclusivamente al Estado", "Nacionalizó los bancos", "Eliminó la reelección"],
+        answer: 1,
+        explain: "También reconoció a la Iglesia el derecho de poseer bienes y se establecieron relaciones con el Vaticano."
+      },
+      {
+        q: "¿Qué ocurrió el 1 de enero de 1994?",
+        options: ["Entró en vigor el TLC entre México, Estados Unidos y Canadá", "Se nacionalizó la banca", "Se firmó el Fobaproa", "Cayó el Muro de Berlín"],
         answer: 0,
-        explain: "La reforma de 2007-2008 buscó reducir la influencia del dinero en las campañas."
+        explain: "Ese año también surgió el EZLN, y terminó el sexenio en un clima de violencia y crisis."
       }
     ]
   },
+
   {
     id: 8,
-    title: "Reformas estructurales",
-    period: "2012 – 2018",
+    title: "Los gobiernos neoliberales II: Zedillo, Fox y Calderón",
+    period: "1994 – 2012",
     lesson: [
-      "## El regreso del PRI",
-      "En 2012 Enrique Peña Nieto, del PRI, ganó la presidencia para el sexenio 2012–2018. Su gobierno firmó el Pacto por México en diciembre de 2012, un acuerdo con los principales partidos (PAN y PRD) para impulsar reformas de fondo.",
-      "## Reformas estructurales",
-      "Se aprobaron reformas en varios ámbitos. En educación (2013) se creó el Servicio Profesional Docente y un sistema de evaluación magisterial. En telecomunicaciones (2013) se creó el Instituto Federal de Telecomunicaciones (IFT) para regular el sector. En materia fiscal (2013) se modificaron impuestos. En energía (2013-2014) se abrieron el petróleo y la electricidad a la inversión privada, con la posibilidad de contratos con empresas extranjeras.",
-      "## Reforma política de 2014",
-      "En 2014 el Instituto Federal Electoral (IFE) fue sustituido por el Instituto Nacional Electoral (INE), con nuevas facultades para organizar elecciones federales y locales. También se permitieron las candidaturas independientes, es decir, candidatos sin partido.",
-      "## Ayotzinapa",
-      "La noche del 26 de septiembre de 2014, en Iguala, Guerrero, 43 estudiantes de la Escuela Normal Rural de Ayotzinapa desaparecieron tras ataques de policías municipales y la participación de grupos criminales. El caso se volvió símbolo de la impunidad y de la desaparición forzada, y se investigó en años posteriores sin una versión definitiva aceptada por las familias.",
-      "## Corrupción y escándalos",
-      "En 2014 se hizo público el caso de la \"Casa Blanca\", una propiedad de la esposa del presidente que generó dudas sobre posibles conflictos de interés. El escándalo dañó la credibilidad del gobierno, aunque no hubo sanción definitiva para los involucrados.",
-      "## Seguridad y el Chapo",
-      "En 2015 Joaquín \"El Chapo\" Guzmán escapó del penal del Altiplano, en el Estado de México, por segunda ocasión; la primera fue en 2001 desde el penal de Puente Grande. Fue recapturado en 2016 y extraditado a Estados Unidos en 2017.",
-      "## Economía y el TLCAN",
-      "El crecimiento económico fue bajo durante el sexenio. En 2016 el peso se depreció fuertemente tras la elección presidencial de Estados Unidos. En 2017 y 2018 se renegoció el TLCAN, que dio lugar al T-MEC, firmado en 2018.",
-      "## La elección de 2018",
-      "En la elección presidencial del 1 de julio de 2018, Andrés Manuel López Obrador, candidato de la coalición encabezada por Morena, ganó con más del 50 % de los votos. Fue el primer triunfo de Morena, un partido fundado en 2014, y la segunda vez que el PRI perdía la presidencia tras la alternancia de 2000.",
+      "## Ernesto Zedillo (1994–2000): el «error de diciembre»",
+      "En los primeros días de su gobierno ocurrió el «error de diciembre»: el secretario de Hacienda discutió con los banqueros la posibilidad de devaluar el peso. Cuando el peso se reestableció, los banqueros y los grandes inversionistas ya habían cambiado sus fortunas a dólares, lo que los benefició a ellos y perjudicó al país. Estados Unidos hizo un préstamo de emergencia a México de 50 000 millones de dólares, con altos intereses y para pagar a corto plazo.",
+      "La crisis de 1994 afectó a todas las personas que tenían créditos bancarios para comprar casas o carros, o tarjetas de crédito. Los bancos fueron inflexibles con los deudores y embargaron propiedades. Zedillo decidió subsidiar a los bancos comprando las deudas no pagadas mediante el Fondo Bancario de Protección al Ahorro (Fobaproa): el rescate de los bancos se hizo con el dinero de todos los mexicanos.",
+      "Durante el sexenio aumentó la pobreza, el peso llegó a 9.90 por dólar y la deuda externa pasó de 130 000 a 167 000 millones de dólares. La respuesta del gobierno fue el Programa para la Educación, la Salud y la Alimentación (Progresa), que daba apoyos económicos directos a familias vulnerables.",
+      "## Vicente Fox (2000–2006)",
+      "Continuó la política económica neoliberal y siguió apoyando al gran capital y a los inversionistas extranjeros. Ofreció mejorar el modelo económico, pero ninguna de sus medidas se cumplió. Hubo estabilidad económica, pero sin crecimiento, y como no hubo crecimiento la pobreza aumentó por el crecimiento de la población.",
+      "Cientos de miles de mexicanos se incorporaron a la economía informal (contrabando, piratería). Millones se fueron a Estados Unidos a buscar trabajo y enviaron remesas: esas remesas superaron los ingresos por turismo y solo quedaron por debajo de los ingresos por la venta de petróleo.",
+      "Con base en Progresa, Fox creó el programa Oportunidades: daba a las familias apoyos en dinero, becas, útiles escolares, despensas y materiales de construcción. Se beneficiaron más de un millón de familias en pobreza extrema, pero gran parte de la población quedó fuera, y solo se aplicó en 476 de los casi 2 500 municipios del país.",
+      "En las elecciones intermedias el PAN perdió 55 diputados, y por eso las reformas de Fox no pudieron realizarse del todo.",
+      "## La elección de 2006",
+      "Para la elección de 2006 se presentó una «guerra sucia» de Fox, el PAN, las organizaciones empresariales y la Iglesia católica contra el candidato del PRD, Andrés Manuel López Obrador. La elección fue cerrada: un primer conteo daba una ventaja de 0.58 % a Felipe Calderón. Los seguidores de López Obrador exigían «voto por voto, casilla por casilla».",
+      "El Tribunal Electoral del Poder Judicial de la Federación decidió abrir solo el 11 % de las casillas, y no todas, como exigían. El resultado mostró anomalías e irregularidades, y la distancia se acortó aún más: Calderón 35.71 % y López Obrador 35.15 %. El «voto por voto» no se cumplió y Felipe Calderón fue declarado presidente electo, aunque los magistrados reconocieron la intromisión de Fox en el proceso.",
+      "López Obrador se declaró simbólicamente «Presidente Legítimo de México» y empezó a recorrer el país para crear una organización política y social que lo postulara en 2012.",
+      "## Felipe Calderón (2006–2012): la guerra contra el narco",
+      "Calderón inició una lucha frontal contra el crimen organizado, principalmente el narcotráfico, mediante la acción del ejército. Muchos inocentes murieron en los enfrentamientos entre el gobierno y los cárteles. Las cifras que da la presentación: 29 000 desaparecidos y 170 000 muertes relacionadas con el crimen organizado.",
+      "Otros hechos del sexenio: murieron 49 niños en la Guardería ABC, en Sonora; se construyó la «Estela de Luz», un monumento de 104 metros de altura; los feminicidios aumentaron 68 % durante el sexenio, y el 95 % de los casos quedó impune; aumentaron las ejecuciones de funcionarios.",
+      "## Sobre lo que no cubre este módulo",
+      "Las presentaciones del maestro llegan hasta el sexenio de Calderón (2012). No tratan el sexenio de Enrique Peña Nieto ni la elección de 2018. Si tu maestro los incluye en el examen, díselo a tu papá para que se agregue ese módulo.",
       "## Para el examen",
-      "Ideas clave: el sexenio se caracterizó por reformas estructurales acordadas en el Pacto por México, pero también por escándalos de corrupción, violencia y la crisis de Ayotzinapa; la elección de 2018 cerró el periodo de estudio. Fechas: 2012 (Pacto por México), 2013 (reformas educativa, telecom y fiscal), 2014 (INE y Ayotzinapa), 2015 (fuga de El Chapo), 2018 (triunfo de AMLO)."
+      "Ideas clave: el «error de diciembre» de 1994 provocó una crisis; el rescate bancario fue el Fobaproa y se pagó con dinero público; Progresa (Zedillo) y Oportunidades (Fox) fueron programas de apoyo directo a familias pobres; con Fox hubo estabilidad sin crecimiento y las remesas fueron la segunda fuente de ingresos; en 2006 la diferencia fue mínima (Calderón 35.71 % y López Obrador 35.15 %) y se pidió «voto por voto, casilla por casilla»; Calderón inició la guerra contra el narco con el ejército."
     ],
-    game: null,
     quiz: [
       {
-        q: "¿Qué acuerdo firmaron los principales partidos en diciembre de 2012?",
-        options: ["Pacto por México", "Pacto de Solidaridad", "Pacto de Chapultepec", "Pacto de Ocampo"],
+        q: "¿En qué consistió el «error de diciembre»?",
+        options: ["Se discutió con los banqueros una posible devaluación y los grandes inversionistas cambiaron sus fortunas a dólares antes de la devaluación", "Se nacionalizó la banca", "Se canceló el TLC", "Se firmó el Fobaproa con el pueblo"],
         answer: 0,
-        explain: "El Pacto por México reunió al PRI, al PAN y al PRD para impulsar reformas de fondo."
+        explain: "Esto benefició a banqueros e inversionistas y perjudicó al país. Estados Unidos hizo un préstamo de emergencia de 50 000 millones de dólares."
       },
       {
-        q: "¿Qué reforma de 2013 creó el Instituto Federal de Telecomunicaciones (IFT)?",
-        options: ["Educativa", "Telecomunicaciones", "Fiscal", "Política"],
+        q: "¿Qué fue el Fobaproa?",
+        options: ["Un programa de becas", "Un fondo que compró las deudas no pagadas de los bancos con dinero de todos los mexicanos", "Una empresa estatal", "Un tratado comercial"],
         answer: 1,
-        explain: "La reforma en telecomunicaciones de 2013 creó el IFT como regulador del sector."
+        explain: "Zedillo optó por subsidiar a los bancos mientras había deudores que perdían sus propiedades."
       },
       {
-        q: "¿Qué organismo sustituyó al IFE en 2014?",
-        options: ["INE", "IFAI", "CNDH", "TEPJF"],
-        answer: 0,
-        explain: "En 2014 el Instituto Nacional Electoral (INE) sustituyó al IFE."
-      },
-      {
-        q: "¿Cuántos estudiantes de Ayotzinapa desaparecieron en 2014?",
-        options: ["26", "33", "43", "70"],
-        answer: 2,
-        explain: "Desaparecieron 43 estudiantes de la Normal Rural de Ayotzinapa en Iguala, Guerrero."
-      },
-      {
-        q: "¿En qué ciudad de Guerrero ocurrió la desaparición de los estudiantes de Ayotzinapa?",
-        options: ["Acapulco", "Iguala", "Chilpancingo", "Taxco"],
+        q: "¿Cuál fue el programa de apoyos directos creado en el gobierno de Zedillo?",
+        options: ["Pronasol", "Progresa", "Oportunidades", "Prospera"],
         answer: 1,
-        explain: "Los hechos ocurrieron en Iguala, Guerrero, en septiembre de 2014."
+        explain: "Pronasol fue de Salinas y Oportunidades se creó en el gobierno de Fox, con base en Progresa."
       },
       {
-        q: "¿De qué penal escapó Joaquín \"El Chapo\" Guzmán en 2015?",
-        options: ["Penal del Altiplano", "Penal de Puente Grande", "Penal de las Islas Marías", "Penal de Tepic"],
-        answer: 0,
-        explain: "El Chapo escapó del Altiplano en 2015. En 2001 había escapado del penal de Puente Grande."
-      },
-      {
-        q: "¿Quién ganó la elección presidencial de 2018?",
-        options: ["Ricardo Anaya", "Andrés Manuel López Obrador", "José Antonio Meade", "Margarita Zavala"],
+        q: "¿Cuál fue una característica económica del gobierno de Fox?",
+        options: ["Gran crecimiento económico", "Estabilidad económica sin crecimiento", "Nacionalización de empresas", "Fin de las remesas"],
         answer: 1,
-        explain: "López Obrador ganó la elección del 1 de julio de 2018 con más del 50 % de los votos."
+        explain: "Continuó la política neoliberal. Sin crecimiento, la pobreza aumentó con el crecimiento de la población."
       },
       {
-        q: "¿Qué partido fundó Andrés Manuel López Obrador?",
-        options: ["Morena", "PRD", "PT", "Movimiento Ciudadano"],
-        answer: 0,
-        explain: "López Obrador fundó Morena, partido que lo postuló en 2018."
+        q: "¿Qué lugar ocuparon las remesas de los migrantes en los ingresos del país durante el sexenio de Fox?",
+        options: ["Superaron al petróleo", "Superaron al turismo y solo estuvieron por debajo del petróleo", "Eran insignificantes", "Superaron a las exportaciones"],
+        answer: 1,
+        explain: "Millones de mexicanos emigraron a Estados Unidos y enviaron dinero a sus familias."
+      },
+      {
+        q: "¿Qué exigían los seguidores de López Obrador en 2006?",
+        options: ["Que se anulara la elección de 1988", "«Voto por voto, casilla por casilla»", "Que Fox renunciara", "Que el Tribunal abriera solo el 11 % de las casillas"],
+        answer: 1,
+        explain: "El Tribunal abrió solo el 11 % de las casillas. Calderón quedó con 35.71 % y López Obrador con 35.15 %."
+      },
+      {
+        q: "¿Cómo se declaró simbólicamente López Obrador tras la elección de 2006?",
+        options: ["Presidente electo", "Presidente Legítimo de México", "Jefe Máximo", "Candidato ciudadano"],
+        answer: 1,
+        explain: "Empezó a recorrer el país para crear una organización que lo postulara en 2012."
+      },
+      {
+        q: "¿En qué consistió la estrategia principal del gobierno de Calderón contra el crimen organizado?",
+        options: ["Legalizar las drogas", "Una lucha frontal mediante la acción del ejército", "Dialogar con los cárteles", "Cerrar la frontera con Estados Unidos"],
+        answer: 1,
+        explain: "La presentación menciona 29 000 desaparecidos y 170 000 muertes relacionadas con el crimen organizado."
       }
     ]
   }
